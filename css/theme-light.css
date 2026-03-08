@@ -1,0 +1,102 @@
+/*
+=========================================================
+Light Theme
+=========================================================
+*/
+
+:root[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --heading-color: #0f172a;
+    --muted-color: #475569;
+
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --accent-contrast: #ffffff;
+
+    --border-color: rgba(15, 23, 42, 0.10);
+    --border-strong: rgba(15, 23, 42, 0.18);
+    --accent-soft-border: rgba(2, 132, 199, 0.22);
+
+    --navbar-bg: rgba(248, 250, 252, 0.82);
+    --footer-bg: rgba(241, 245, 249, 0.95);
+
+    --nav-link-color: #334155;
+
+    --badge-bg: rgba(2, 132, 199, 0.08);
+
+    --theme-switcher-bg: rgba(255, 255, 255, 0.85);
+    --theme-btn-hover-bg: rgba(15, 23, 42, 0.06);
+    --active-theme-btn-bg: #0284c7;
+    --active-theme-btn-text: #ffffff;
+
+    --outline-hover-bg: rgba(15, 23, 42, 0.04);
+
+    --panel-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.98));
+    --panel-header-bg: rgba(248, 250, 252, 0.9);
+    --panel-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    --code-text-color: #1e293b;
+
+    --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.95));
+    --card-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
+    --card-shadow-hover: 0 22px 46px rgba(15, 23, 42, 0.10);
+    --icon-box-bg: rgba(2, 132, 199, 0.08);
+    --progress-track-bg: rgba(15, 23, 42, 0.08);
+
+    --summary-box-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+    --summary-box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+
+    --featured-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.98));
+    --featured-card-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+    --project-badge-bg: rgba(2, 132, 199, 0.08);
+    --project-info-bg: rgba(248, 250, 252, 0.94);
+    --stat-box-bg: rgba(248, 250, 252, 0.98);
+
+    --flow-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.97));
+    --flow-card-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    --flow-header-bg: rgba(248, 250, 252, 0.96);
+    --flow-step-bg: rgba(255, 255, 255, 0.98);
+
+    --project-preview-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.97));
+    --project-preview-shadow: 0 16px 38px rgba(15, 23, 42, 0.05);
+    --project-preview-shadow-hover: 0 22px 44px rgba(15, 23, 42, 0.09);
+    --project-preview-tag-bg: rgba(2, 132, 199, 0.08);
+
+    --projects-cta-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.97));
+    --projects-cta-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+
+    --architecture-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.97));
+    --architecture-card-shadow: 0 18px 42px rgba(15, 23, 42, 0.06);
+    --architecture-header-bg: rgba(248, 250, 252, 0.96);
+    --architecture-inner-box-bg: rgba(255, 255, 255, 0.98);
+    --system-flow-index-bg: rgba(2, 132, 199, 0.08);
+
+    --architecture-cta-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.97));
+    --architecture-cta-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+
+    --github-stat-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.97));
+    --github-stat-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+    --github-stat-shadow-hover: 0 22px 44px rgba(15, 23, 42, 0.09);
+
+    --github-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.97));
+    --github-card-shadow: 0 18px 42px rgba(15, 23, 42, 0.06);
+    --github-repo-item-bg: rgba(255, 255, 255, 0.98);
+
+    --github-contribution-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.97));
+    --github-contribution-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+
+    --blog-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.97));
+    --blog-card-shadow: 0 16px 38px rgba(15, 23, 42, 0.05);
+    --blog-card-shadow-hover: 0 22px 44px rgba(15, 23, 42, 0.09);
+
+    --blog-cta-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.97));
+    --blog-cta-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+
+    --timeline-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(241, 245, 249, 0.97));
+    --timeline-card-shadow: 0 16px 38px rgba(15, 23, 42, 0.05);
+    --timeline-badge-bg: rgba(2, 132, 199, 0.08);
+    --timeline-dot-ring: rgba(2, 132, 199, 0.10);
+
+    --contact-cta-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.98));
+    --contact-cta-shadow: 0 18px 42px rgba(15, 23, 42, 0.07);
+}

@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!--
+        =========================================================
+        Portfolio: Md. Naimul Islam
+        Page     : Home
+        Stack    : HTML + Bootstrap 5 + Vanilla JavaScript
+        Purpose  : Professional backend engineer portfolio
+        =========================================================
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Md. Naimul Islam Backend Engineer Portfolio. Python, FastAPI, Clean Architecture, scalable backend systems.">
+
+    <title>Md. Naimul Islam | Backend Engineer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+    <!-- ======================================
+         NAVBAR
+         ====================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo" href="index.html">NAIMUL</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="architecture.html">Architecture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="system-design.html">System Design</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Theme Selector -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <div class="theme-switcher d-flex align-items-center gap-2">
+                            <button class="btn btn-sm theme-btn" data-theme-value="dark" title="Dark mode"
+                                aria-label="Switch to dark mode">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="light" title="Light mode"
+                                aria-label="Switch to light mode">
+                                <i class="bi bi-sun"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="system" title="System theme"
+                                aria-label="Use system theme">
+                                <i class="bi bi-display"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================
+         HERO SECTION
+         ====================================== -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <span class="section-badge mb-3 d-inline-block">Backend Engineer Portfolio</span>
+
+                    <h1 class="display-3 fw-bold hero-title">
+                        Md. Naimul Islam builds backend systems that are clean, scalable, and professional.
+                    </h1>
+
+                    <h3 class="hero-subtitle mt-4">
+                        Backend Engineer
+                    </h3>
+
+                    <p class="lead mt-3 hero-text">
+                        <span id="typingText"></span>
+                        <span class="typing-cursor">|</span>
+                    </p>
+
+                    <p class="hero-description mt-4">
+                        I focus on Python, FastAPI, clean architecture, maintainable business logic,
+                        and backend systems that remain easy to extend as products grow.
+                    </p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="projects.html" class="btn btn-accent btn-lg">
+                            View Projects
+                        </a>
+
+                        <a href="contact.html" class="btn btn-outline-theme btn-lg">
+                            Contact Me
+                        </a>
+
+                        <a href="resume/md_naimul_islam_resume.pdf" class="btn btn-outline-theme btn-lg">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="profile-panel">
+                        <div class="profile-panel-header">
+                            <span class="profile-dot dot-red"></span>
+                            <span class="profile-dot dot-yellow"></span>
+                            <span class="profile-dot dot-green"></span>
+                            <span class="profile-file-name ms-3">engineer-profile.ts</span>
+                        </div>
+
+                        <div class="profile-code-block">
+<pre><code>const engineerProfile = {
+    name: "Md. Naimul Islam",
+    role: "Backend Developer",
+    stack: ["Python", "FastAPI", "PostgreSQL"],
+    architecture: "Clean Architecture",
+    focus: "Scalable API Design",
+    status: "Available for opportunities"
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         ENGINEERING PHILOSOPHY
+         ====================================== -->
+    <section class="section-spacing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title mb-4">Engineering Philosophy</h2>
+
+                    <p class="lead section-description">
+                        I design and build backend systems with a strong focus on clear architecture, 
+                        scalable API design, and maintainable business logic. 
+                        My approach emphasizes clean architecture principles, well-defined system boundaries, 
+                        and readable backend structures that remain understandable as projects grow in size and complexity. 
+                        I aim to create backend services that are reliable, scalable, 
+                        and easy for developers to maintain, extend, and evolve over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         SKILLS SECTION
+         ====================================== -->
+    <section class="section-spacing section-skills">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Skills & Tech Stack</span>
+                    <h2 class="section-title mb-3">Technologies I use to build reliable backend systems</h2>
+                    <p class="section-description">
+                        My core strengths are backend engineering, API development, software architecture,
+                        and database-oriented application design.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3">
+                    <div class="skill-card h-100">
+                        <div class="skill-card-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+
+                        <h3 class="skill-card-title">Backend Engineering</h3>
+
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-row">
+                                    <span>Python</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 95%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>FastAPI</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>REST API</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Async Programming</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="skill-card h-100">
+                        <div class="skill-card-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+
+                        <h3 class="skill-card-title">Architecture</h3>
+
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-row">
+                                    <span>Clean Architecture</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Repository Pattern</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 88%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Service Layer</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Dependency Injection</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 75%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="skill-card h-100">
+                        <div class="skill-card-icon">
+                            <i class="bi bi-database"></i>
+                        </div>
+
+                        <h3 class="skill-card-title">Database</h3>
+
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-row">
+                                    <span>PostgreSQL</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>MySQL</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 82%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>SQL Optimization</span>
+                                    <span>78%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 78%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Schema Design</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="skill-card h-100">
+                        <div class="skill-card-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+
+                        <h3 class="skill-card-title">Developer Tools</h3>
+
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-row">
+                                    <span>Git</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 88%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Docker</span>
+                                    <span>72%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 72%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Linux</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span>Swagger / OpenAPI</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="skills-summary-box">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-8">
+                                <h3 class="skills-summary-title">Backend-first engineering mindset</h3>
+                                <p class="skills-summary-text mb-0">
+                                    I prefer maintainable service boundaries, readable business logic,
+                                    API consistency, and architecture that makes long-term growth easier.
+                                    My portfolio is designed to reflect not only tools, but how I think as an engineer.
+                                </p>
+                            </div>
+
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="architecture.html" class="btn btn-outline-theme">
+                                    View Architecture Thinking
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         FEATURED PROJECT SECTION
+         ====================================== -->
+    <section class="section-spacing section-featured-project">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Featured Project</span>
+                    <h2 class="section-title mb-3">Grocery POS Backend System</h2>
+                    <p class="section-description">
+                        A production-focused backend architecture for inventory control, sales workflows,
+                        authentication, and business logic separation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="featured-project-card">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="featured-project-content">
+                            <div class="project-meta-list mb-4">
+                                <span class="project-tech-badge">Python</span>
+                                <span class="project-tech-badge">FastAPI</span>
+                                <span class="project-tech-badge">PostgreSQL</span>
+                                <span class="project-tech-badge">Clean Architecture</span>
+                            </div>
+
+                            <h3 class="featured-project-title">
+                                Backend architecture designed for maintainability and real business workflows
+                            </h3>
+
+                            <p class="featured-project-text mt-3">
+                                This project reflects my approach to backend engineering in a real-world product environment.
+                                It focuses on clean code boundaries, organized business logic, API consistency,
+                                and scalable backend structure for grocery POS operations.
+                            </p>
+
+                            <div class="row g-3 mt-4">
+                                <div class="col-sm-6">
+                                    <div class="project-info-box">
+                                        <h4 class="project-info-title">Core Features</h4>
+                                        <ul class="project-info-list">
+                                            <li>Inventory management</li>
+                                            <li>Sales processing workflow</li>
+                                            <li>Authentication & access control</li>
+                                            <li>Business logic isolation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="project-info-box">
+                                        <h4 class="project-info-title">Engineering Focus</h4>
+                                        <ul class="project-info-list">
+                                            <li>Route → Service → Repository</li>
+                                            <li>Maintainable module boundaries</li>
+                                            <li>Scalable API design</li>
+                                            <li>Readable system structure</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mt-4">
+                                <div class="col-sm-4">
+                                    <div class="project-stat-box">
+                                        <span class="project-stat-number">4+</span>
+                                        <span class="project-stat-label">Core modules</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="project-stat-box">
+                                        <span class="project-stat-number">REST</span>
+                                        <span class="project-stat-label">API-first design</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="project-stat-box">
+                                        <span class="project-stat-number">Clean</span>
+                                        <span class="project-stat-label">Layer separation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 d-flex flex-wrap gap-3">
+                                <a href="projects.html" class="btn btn-accent">
+                                    View Case Studies
+                                </a>
+
+                                <a href="architecture.html" class="btn btn-outline-theme">
+                                    View Architecture
+                                </a>
+
+                                <a href="https://github.com/mdnaimul16" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-theme">
+                                    GitHub Profile
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="architecture-flow-card">
+                            <div class="architecture-flow-header">
+                                <h4 class="architecture-flow-title mb-0">Architecture Flow</h4>
+                            </div>
+
+                            <div class="architecture-flow-body">
+                                <div class="flow-step">Client Request</div>
+                                <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+
+                                <div class="flow-step">API Router</div>
+                                <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+
+                                <div class="flow-step">Service Layer</div>
+                                <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+
+                                <div class="flow-step">Repository Layer</div>
+                                <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+
+                                <div class="flow-step">Database Layer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         PROJECTS PREVIEW SECTION
+         ====================================== -->
+    <section class="section-spacing section-projects-preview">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Projects Preview</span>
+                    <h2 class="section-title mb-3">Selected backend projects and engineering work</h2>
+                    <p class="section-description">
+                        These projects represent my approach to architecture, API design, maintainability,
+                        and solving backend-focused product problems.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <article class="project-preview-card h-100">
+                        <div class="project-preview-top">
+                            <span class="project-preview-type">Featured Backend Project</span>
+                            <span class="project-preview-year">2026</span>
+                        </div>
+
+                        <h3 class="project-preview-title">Grocery POS Backend System</h3>
+
+                        <p class="project-preview-text">
+                            A backend system for inventory operations, sales workflow handling,
+                            authentication, and clean business-layer separation.
+                        </p>
+
+                        <div class="project-preview-tags">
+                            <span class="project-preview-tag">Python</span>
+                            <span class="project-preview-tag">FastAPI</span>
+                            <span class="project-preview-tag">PostgreSQL</span>
+                            <span class="project-preview-tag">Clean Architecture</span>
+                        </div>
+
+                        <div class="project-preview-footer">
+                            <a href="projects.html" class="btn btn-accent btn-sm">View Details</a>
+                            <a href="architecture.html" class="btn btn-outline-theme btn-sm">Architecture</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="project-preview-card h-100">
+                        <div class="project-preview-top">
+                            <span class="project-preview-type">Security / Auth Project</span>
+                            <span class="project-preview-year">2026</span>
+                        </div>
+
+                        <h3 class="project-preview-title">Authentication Service</h3>
+
+                        <p class="project-preview-text">
+                            A service-oriented authentication module focused on JWT flow,
+                            role-based access control, token handling, and secure API boundaries.
+                        </p>
+
+                        <div class="project-preview-tags">
+                            <span class="project-preview-tag">FastAPI</span>
+                            <span class="project-preview-tag">JWT</span>
+                            <span class="project-preview-tag">RBAC</span>
+                            <span class="project-preview-tag">Security</span>
+                        </div>
+
+                        <div class="project-preview-footer">
+                            <a href="projects.html" class="btn btn-accent btn-sm">View Details</a>
+                            <a href="https://github.com/mdnaimul16" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-outline-theme btn-sm">GitHub</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="project-preview-card h-100">
+                        <div class="project-preview-top">
+                            <span class="project-preview-type">Reusable Engineering Starter</span>
+                            <span class="project-preview-year">2026</span>
+                        </div>
+
+                        <h3 class="project-preview-title">FastAPI Clean Architecture Boilerplate</h3>
+
+                        <p class="project-preview-text">
+                            A reusable project starter designed to speed up backend development with
+                            organized folder structure, service boundaries, and maintainable patterns.
+                        </p>
+
+                        <div class="project-preview-tags">
+                            <span class="project-preview-tag">Python</span>
+                            <span class="project-preview-tag">FastAPI</span>
+                            <span class="project-preview-tag">Boilerplate</span>
+                            <span class="project-preview-tag">Architecture</span>
+                        </div>
+
+                        <div class="project-preview-footer">
+                            <a href="projects.html" class="btn btn-accent btn-sm">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-theme btn-sm">Discuss Project</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="projects-preview-cta">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-8">
+                                <h3 class="projects-preview-cta-title">Want to see complete project breakdowns?</h3>
+                                <p class="projects-preview-cta-text mb-0">
+                                    The full projects page will include filtered project cards, deeper descriptions,
+                                    architecture context, and better navigation for recruiters and engineers.
+                                </p>
+                            </div>
+
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="projects.html" class="btn btn-accent">
+                                    Explore All Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         SYSTEM ARCHITECTURE SECTION
+         ====================================== -->
+    <section class="section-spacing section-system-architecture">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">System Architecture</span>
+                    <h2 class="section-title mb-3">How I structure backend systems for long-term maintainability</h2>
+                    <p class="section-description">
+                        I prefer layered backend design that keeps transport, business logic,
+                        data access, and persistence clearly separated.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="architecture-principles-card h-100">
+                        <h3 class="architecture-block-title">Core architecture principles</h3>
+                        <p class="architecture-block-text">
+                            My backend approach focuses on reducing coupling, improving readability,
+                            and making the system easier to extend without breaking existing logic.
+                        </p>
+
+                        <div class="row g-3 mt-2">
+                            <div class="col-sm-6">
+                                <div class="architecture-principle-box">
+                                    <div class="architecture-principle-icon">
+                                        <i class="bi bi-layers"></i>
+                                    </div>
+                                    <h4 class="architecture-principle-title">Layer Separation</h4>
+                                    <p class="architecture-principle-text">
+                                        Keep request handling, business rules, and database concerns isolated.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="architecture-principle-box">
+                                    <div class="architecture-principle-icon">
+                                        <i class="bi bi-braces"></i>
+                                    </div>
+                                    <h4 class="architecture-principle-title">Readable Logic</h4>
+                                    <p class="architecture-principle-text">
+                                        Put business decisions in the service layer, not in route handlers.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="architecture-principle-box">
+                                    <div class="architecture-principle-icon">
+                                        <i class="bi bi-database-gear"></i>
+                                    </div>
+                                    <h4 class="architecture-principle-title">Repository Isolation</h4>
+                                    <p class="architecture-principle-text">
+                                        Keep database access abstracted so the rest of the application stays clean.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="architecture-principle-box">
+                                    <div class="architecture-principle-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <h4 class="architecture-principle-title">Scalable Growth</h4>
+                                    <p class="architecture-principle-text">
+                                        Design structure that can support new modules and business rules over time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="system-architecture-card h-100">
+                        <div class="system-architecture-header">
+                            <h3 class="architecture-block-title mb-0">Preferred backend flow</h3>
+                        </div>
+
+                        <div class="system-architecture-body">
+                            <div class="system-flow-step">
+                                <span class="system-flow-index">01</span>
+                                <div class="system-flow-content">
+                                    <h4>Client / Frontend</h4>
+                                    <p>User actions and application requests enter through API endpoints.</p>
+                                </div>
+                            </div>
+
+                            <div class="system-flow-connector"></div>
+
+                            <div class="system-flow-step">
+                                <span class="system-flow-index">02</span>
+                                <div class="system-flow-content">
+                                    <h4>Route Layer</h4>
+                                    <p>Routes validate input, parse requests, and delegate responsibility cleanly.</p>
+                                </div>
+                            </div>
+
+                            <div class="system-flow-connector"></div>
+
+                            <div class="system-flow-step">
+                                <span class="system-flow-index">03</span>
+                                <div class="system-flow-content">
+                                    <h4>Service Layer</h4>
+                                    <p>Business logic lives here, keeping decisions centralized and testable.</p>
+                                </div>
+                            </div>
+
+                            <div class="system-flow-connector"></div>
+
+                            <div class="system-flow-step">
+                                <span class="system-flow-index">04</span>
+                                <div class="system-flow-content">
+                                    <h4>Repository Layer</h4>
+                                    <p>Data access is isolated to keep persistence concerns out of business rules.</p>
+                                </div>
+                            </div>
+
+                            <div class="system-flow-connector"></div>
+
+                            <div class="system-flow-step">
+                                <span class="system-flow-index">05</span>
+                                <div class="system-flow-content">
+                                    <h4>Database Layer</h4>
+                                    <p>The persistence layer stores and retrieves structured business data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="architecture-cta-box">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-8">
+                                <h3 class="architecture-cta-title">Architecture is one of my strongest differentiators</h3>
+                                <p class="architecture-cta-text mb-0">
+                                    I do not only focus on making features work. I focus on making systems readable,
+                                    extendable, and stable as product complexity grows.
+                                </p>
+                            </div>
+
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="architecture.html" class="btn btn-accent">
+                                    Explore Full Architecture Page
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         GITHUB ACTIVITY SECTION
+         ====================================== -->
+    <section class="section-spacing section-github-activity">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">GitHub Activity</span>
+                    <h2 class="section-title mb-3">Open code, engineering consistency, and project visibility</h2>
+                    <p class="section-description">
+                        My GitHub profile reflects how I structure repositories, present backend work,
+                        and document projects with an engineering mindset.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="github-stat-card h-100">
+                        <div class="github-stat-icon">
+                            <i class="bi bi-folder2-open"></i>
+                        </div>
+                        <span class="github-stat-number" id="githubReposCount">15+</span>
+                        <span class="github-stat-label">Repositories</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="github-stat-card h-100">
+                        <div class="github-stat-icon">
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <span class="github-stat-number" id="githubStarsCount">Growing</span>
+                        <span class="github-stat-label">Project Quality Focus</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="github-stat-card h-100">
+                        <div class="github-stat-icon">
+                            <i class="bi bi-git"></i>
+                        </div>
+                        <span class="github-stat-number" id="githubActivityLevel">Active</span>
+                        <span class="github-stat-label">Engineering Practice</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="github-stat-card h-100">
+                        <div class="github-stat-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <span class="github-stat-number" id="githubPrimaryStack">Python</span>
+                        <span class="github-stat-label">Primary Stack</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="github-repositories-card h-100">
+                        <div class="github-card-header">
+                            <h3 class="github-card-title mb-0">Repository highlights</h3>
+                        </div>
+
+                        <div class="github-card-body">
+                            <div class="repo-highlight-item">
+                                <div class="repo-highlight-main">
+                                    <h4>Grocery POS Backend</h4>
+                                    <p>
+                                        A backend architecture project focused on clean module boundaries,
+                                        service logic, and scalable API workflows.
+                                    </p>
+                                </div>
+                                <span class="repo-language-badge">Python</span>
+                            </div>
+
+                            <div class="repo-highlight-item">
+                                <div class="repo-highlight-main">
+                                    <h4>Authentication Service</h4>
+                                    <p>
+                                        A security-focused backend module covering token handling,
+                                        authorization flow, and service-layer design.
+                                    </p>
+                                </div>
+                                <span class="repo-language-badge">FastAPI</span>
+                            </div>
+
+                            <div class="repo-highlight-item">
+                                <div class="repo-highlight-main">
+                                    <h4>Clean Architecture Boilerplate</h4>
+                                    <p>
+                                        A reusable engineering starter built to speed up structured backend development.
+                                    </p>
+                                </div>
+                                <span class="repo-language-badge">Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="github-summary-card h-100">
+                        <h3 class="github-card-title">Why GitHub matters in this portfolio</h3>
+
+                        <p class="github-summary-text">
+                            GitHub is where engineering habits become visible. It shows repository organization,
+                            naming quality, documentation style, and how consistently I translate ideas into code.
+                        </p>
+
+                        <ul class="github-summary-list">
+                            <li>Structured backend repositories</li>
+                            <li>Clean naming and project organization</li>
+                            <li>Practical engineering experiments</li>
+                            <li>Code visibility for recruiters and teams</li>
+                        </ul>
+
+                        <div class="github-summary-actions">
+                            <a href="https://github.com/mdnaimul16" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-accent">
+                                Visit GitHub Profile
+                            </a>
+
+                            <a href="projects.html" class="btn btn-outline-theme">
+                                View Portfolio Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="github-contribution-box">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-8">
+                                <h3 class="github-contribution-title">This section is ready for live GitHub API integration</h3>
+                                <p class="github-contribution-text mb-0">
+                                    Right now the layout is implemented professionally with placeholder values.
+                                    In the next upgrade, we can connect real GitHub API data for repository count,
+                                    pinned repositories, languages, and live profile details.
+                                </p>
+                            </div>
+
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="https://github.com/mdnaimul16" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-theme">
+                                    Open GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         BLOG PREVIEW SECTION
+         ====================================== -->
+    <section class="section-spacing section-blog-preview">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Technical Writing</span>
+                    <h2 class="section-title mb-3">Engineering notes, backend concepts, and architecture thinking</h2>
+                    <p class="section-description">
+                        Writing helps me explain technical ideas clearly. It also reflects how I think through
+                        architecture, implementation decisions, and backend design trade-offs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <article class="blog-preview-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">Architecture</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">6 min read</span>
+                        </div>
+
+                        <h3 class="blog-preview-title">
+                            Building Clean Architecture in FastAPI
+                        </h3>
+
+                        <p class="blog-preview-text">
+                            A practical explanation of how to separate routes, services, repositories,
+                            and persistence in a FastAPI backend project.
+                        </p>
+
+                        <div class="blog-preview-footer">
+                            <span class="blog-preview-date">Published 2026</span>
+                            <a href="blog.html" class="blog-preview-link">
+                                Read Article <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="blog-preview-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">Backend Design</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">5 min read</span>
+                        </div>
+
+                        <h3 class="blog-preview-title">
+                            Why Repository Pattern Improves Backend Maintainability
+                        </h3>
+
+                        <p class="blog-preview-text">
+                            A simple breakdown of why isolating database logic makes backend systems
+                            easier to extend, test, and reason about over time.
+                        </p>
+
+                        <div class="blog-preview-footer">
+                            <span class="blog-preview-date">Published 2026</span>
+                            <a href="blog.html" class="blog-preview-link">
+                                Read Article <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="blog-preview-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">System Design</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">7 min read</span>
+                        </div>
+
+                        <h3 class="blog-preview-title">
+                            Designing a Grocery POS Backend for Real Business Workflows
+                        </h3>
+
+                        <p class="blog-preview-text">
+                            A project-focused write-up on inventory flow, sales logic, modular service layers,
+                            and why structure matters in real product systems.
+                        </p>
+
+                        <div class="blog-preview-footer">
+                            <span class="blog-preview-date">Published 2026</span>
+                            <a href="blog.html" class="blog-preview-link">
+                                Read Article <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="blog-preview-cta-box">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-8">
+                                <h3 class="blog-preview-cta-title">Technical writing strengthens this portfolio</h3>
+                                <p class="blog-preview-cta-text mb-0">
+                                    Good engineering is not only about coding. It is also about being able to
+                                    explain decisions, architecture, and trade-offs in a clear professional way.
+                                </p>
+                            </div>
+
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="blog.html" class="btn btn-accent">
+                                    Explore All Articles
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         TIMELINE SECTION
+         ====================================== -->
+    <section class="section-spacing section-timeline">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Professional Journey</span>
+                    <h2 class="section-title mb-3">My path as a backend engineer</h2>
+                    <p class="section-description">
+                        A short timeline that gives recruiters quick context about my education,
+                        career direction, and backend engineering focus.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-wrapper">
+                <!-- Timeline item 1 -->
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-marker-dot"></span>
+                    </div>
+
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="timeline-year">2026 - Present</span>
+                            <span class="timeline-badge">Current Role</span>
+                        </div>
+
+                        <h3 class="timeline-title">Backend Developer</h3>
+                        <h4 class="timeline-subtitle">Offshore Staffing Solutions Ltd.</h4>
+
+                        <p class="timeline-text">
+                            Working on a grocery POS backend system using Python and FastAPI with a strict
+                            clean architecture approach. My work focuses on route, service, repository,
+                            and database layer separation for maintainability and scalability.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Timeline item 2 -->
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-marker-dot"></span>
+                    </div>
+
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="timeline-year">January 2026</span>
+                            <span class="timeline-badge">Education</span>
+                        </div>
+
+                        <h3 class="timeline-title">BSc in Computer Science & Engineering</h3>
+                        <h4 class="timeline-subtitle">American International University-Bangladesh (AIUB)</h4>
+
+                        <p class="timeline-text">
+                            Completed my CSE degree with strong interest in software engineering,
+                            backend development, maintainable architecture, and practical system design.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Timeline item 3 -->
+                <article class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-marker-dot"></span>
+                    </div>
+
+                    <div class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="timeline-year">Ongoing</span>
+                            <span class="timeline-badge">Growth</span>
+                        </div>
+
+                        <h3 class="timeline-title">Deepening Backend Engineering Skills</h3>
+                        <h4 class="timeline-subtitle">Architecture, APIs, and scalable systems</h4>
+
+                        <p class="timeline-text">
+                            Continuously improving in FastAPI architecture, project structuring,
+                            database-driven application design, and production-focused backend thinking.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         CONTACT CTA SECTION
+         ====================================== -->
+    <section class="section-spacing section-contact-cta">
+        <div class="container">
+            <div class="contact-cta-card">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <span class="section-badge mb-3 d-inline-block">Let's Connect</span>
+                        <h2 class="contact-cta-title">
+                            Looking for a backend engineer who values clean architecture and maintainable systems?
+                        </h2>
+                        <p class="contact-cta-text mt-3 mb-0">
+                            I’m interested in backend-focused opportunities where I can contribute with Python,
+                            FastAPI, API design, and clean architecture thinking. If you are hiring or want
+                            to discuss a project, feel free to reach out.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="contact-cta-actions">
+                            <a href="contact.html" class="btn btn-accent btn-lg w-100">
+                                Go to Contact Page
+                            </a>
+
+                            <a href="mailto:md.naimul16@gmail.com" class="btn btn-outline-theme btn-lg w-100">
+                                Email Me Directly
+                            </a>
+
+                            <a href="resume/Md.Naimul_Islam.pdf" class="btn btn-outline-theme w-100">
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     FOOTER
+     ====================================== -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand-block">
+
+                        <a href="index.html" class="footer-brand">Md. Naimul Islam</a>
+
+                        <p class="footer-brand-text">
+                            I am a Backend Developer focused on building scalable and maintainable systems using Python, 
+                            FastAPI, PostgreSQL, and clean architecture principles.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/mdnaimul404"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/naimul404/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:md.naimul16@gmail.com"
+                               class="footer-social-link"
+                               aria-label="Email">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <!-- Resume -->
+                            <a href="resume/md_naimul_islam_resume.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="Resume">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">Navigation</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="system-design.html">System Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">More</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="resume/md_naimul_islam_resume.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   Resume
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/mdnaimul404"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/naimul404/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="footer-contact-block">
+                        <h3 class="footer-block-title">Professional Focus</h3>
+
+                        <ul class="footer-focus-list">
+                            <li>Backend Engineering</li>
+                            <li>FastAPI API Development</li>
+                            <li>PostgreSQL Database Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maintainable Backend Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">
+                        © 2026 Md. Naimul Islam. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-bottom-text mb-0">
+                        Built with HTML, CSS, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

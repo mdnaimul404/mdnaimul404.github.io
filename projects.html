@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!--
+        =========================================================
+        Portfolio: Md. Naimul Islam
+        Page     : Projects
+        Stack    : HTML + Bootstrap 5 + Vanilla JavaScript
+        Purpose  : Showcase backend projects with architecture focus
+        =========================================================
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projects by Md. Naimul Islam. Backend engineering portfolio featuring Python, FastAPI, PostgreSQL, and clean architecture projects.">
+
+    <title>Projects | Md. Naimul Islam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+    <!-- ======================================
+         NAVBAR
+         ====================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo" href="index.html">NAIMUL</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="architecture.html">Architecture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="system-design.html">System Design</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Theme Selector -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <div class="theme-switcher d-flex align-items-center gap-2">
+                            <button class="btn btn-sm theme-btn" data-theme-value="dark" title="Dark mode"
+                                aria-label="Switch to dark mode">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="light" title="Light mode"
+                                aria-label="Switch to light mode">
+                                <i class="bi bi-sun"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="system" title="System theme"
+                                aria-label="Use system theme">
+                                <i class="bi bi-display"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================
+         PAGE HERO
+         ====================================== -->
+    <section class="inner-page-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Projects Portfolio</span>
+
+                    <h1 class="inner-page-title">
+                        Backend projects that reflect architecture thinking, API design, and maintainable engineering.
+                    </h1>
+
+                    <p class="inner-page-description mt-4">
+                        This page highlights my backend-focused work using Python, FastAPI, PostgreSQL,
+                        and clean architecture. Each project is presented not only by technology,
+                        but by how the system is structured and why the design matters.
+                    </p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="#featured-project" class="btn btn-accent btn-lg">View Featured Project</a>
+                        <a href="architecture.html" class="btn btn-outline-theme btn-lg">Architecture Thinking</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="page-summary-card">
+                        <h3 class="page-summary-title">Project Focus</h3>
+
+                        <ul class="page-summary-list">
+                            <li>Backend engineering</li>
+                            <li>API-first development</li>
+                            <li>Clean architecture patterns</li>
+                            <li>Maintainable service logic</li>
+                            <li>Recruiter-friendly project presentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         PROJECTS OVERVIEW
+         ====================================== -->
+    <section class="section-spacing section-projects-overview">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3">
+                    <div class="portfolio-metric-card h-100">
+                        <div class="portfolio-metric-icon">
+                            <i class="bi bi-kanban"></i>
+                        </div>
+                        <span class="portfolio-metric-number">3+</span>
+                        <span class="portfolio-metric-label">Core backend projects</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="portfolio-metric-card h-100">
+                        <div class="portfolio-metric-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <span class="portfolio-metric-number">API</span>
+                        <span class="portfolio-metric-label">Backend-first approach</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="portfolio-metric-card h-100">
+                        <div class="portfolio-metric-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <span class="portfolio-metric-number">Clean</span>
+                        <span class="portfolio-metric-label">Layered architecture focus</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="portfolio-metric-card h-100">
+                        <div class="portfolio-metric-icon">
+                            <i class="bi bi-github"></i>
+                        </div>
+                        <span class="portfolio-metric-number">Public</span>
+                        <span class="portfolio-metric-label">GitHub visibility</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         FEATURED PROJECT
+         ====================================== -->
+    <section id="featured-project" class="section-spacing section-project-case-study">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Featured Case Study</span>
+                    <h2 class="section-title mb-3">Grocery Management Backend System</h2>
+                    <p class="section-description">
+                        A backend architecture project designed around maintainability,
+                        modularity, and real business workflows.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-case-study-card">
+                <div class="row g-5 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="case-study-content">
+                            <div class="project-meta-list mb-4">
+                                <span class="project-tech-badge">Python</span>
+                                <span class="project-tech-badge">FastAPI</span>
+                                <span class="project-tech-badge">PostgreSQL</span>
+                                <span class="project-tech-badge">Clean Architecture</span>
+                            </div>
+
+                            <h3 class="case-study-title">
+                                A maintainable backend for grocery sales, inventory, and business operations
+                            </h3>
+
+                            <p class="case-study-text mt-3">
+                                This project represents my strongest backend engineering work.
+                                It is structured to support business workflows such as product management,
+                                stock control, authentication, and sales processing while keeping the codebase
+                                readable and scalable.
+                            </p>
+
+                            <div class="row g-3 mt-4">
+                                <div class="col-md-6">
+                                    <div class="case-study-block">
+                                        <h4 class="case-study-block-title">Problem</h4>
+                                        <p class="case-study-block-text">
+                                            Grocery management systems need reliable backend workflows for inventory,
+                                            sales transactions, authentication, and consistent data flow.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="case-study-block">
+                                        <h4 class="case-study-block-title">Solution</h4>
+                                        <p class="case-study-block-text">
+                                            Designed the backend using Route → Service → Repository → DB
+                                            so each layer remains focused and maintainable.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="case-study-block">
+                                        <h4 class="case-study-block-title">Engineering Focus</h4>
+                                        <p class="case-study-block-text">
+                                            Clean API boundaries, isolated business logic, repository-based
+                                            database access, and scalable module organization.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="case-study-block">
+                                        <h4 class="case-study-block-title">Why It Matters</h4>
+                                        <p class="case-study-block-text">
+                                            Recruiters and engineering teams can see not only the stack,
+                                            but also how the backend is designed to grow safely.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 d-flex flex-wrap gap-3">
+                                <a href="architecture.html" class="btn btn-accent">View Architecture</a>
+                                <a href="contact.html" class="btn btn-outline-theme">Discuss This Project</a>
+                                <a href="https://github.com/mdnaimul16" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-theme">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="case-study-sidebar h-100">
+                            <h3 class="case-study-sidebar-title">Project Highlights</h3>
+
+                            <div class="case-study-highlight-list">
+                                <div class="case-study-highlight-item">
+                                    <span class="case-study-highlight-label">Architecture</span>
+                                    <span class="case-study-highlight-value">Clean layered flow</span>
+                                </div>
+
+                                <div class="case-study-highlight-item">
+                                    <span class="case-study-highlight-label">Core Modules</span>
+                                    <span class="case-study-highlight-value">Inventory, sales, auth</span>
+                                </div>
+
+                                <div class="case-study-highlight-item">
+                                    <span class="case-study-highlight-label">Database</span>
+                                    <span class="case-study-highlight-value">PostgreSQL</span>
+                                </div>
+
+                                <div class="case-study-highlight-item">
+                                    <span class="case-study-highlight-label">API Style</span>
+                                    <span class="case-study-highlight-value">REST-oriented</span>
+                                </div>
+
+                                <div class="case-study-highlight-item">
+                                    <span class="case-study-highlight-label">Main Goal</span>
+                                    <span class="case-study-highlight-value">Maintainable backend growth</span>
+                                </div>
+                            </div>
+
+                            <div class="architecture-flow-card mt-4">
+                                <div class="architecture-flow-header">
+                                    <h4 class="architecture-flow-title mb-0">Request Flow</h4>
+                                </div>
+
+                                <div class="architecture-flow-body">
+                                    <div class="flow-step">Client Request</div>
+                                    <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <div class="flow-step">Route Layer</div>
+                                    <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <div class="flow-step">Service Layer</div>
+                                    <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <div class="flow-step">Repository Layer</div>
+                                    <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <div class="flow-step">Database</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         PROJECT GRID
+         ====================================== -->
+    <section class="section-spacing section-project-grid">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">More Projects</span>
+                    <h2 class="section-title mb-3">Selected backend projects and engineering concepts</h2>
+                    <p class="section-description">
+                        Additional projects that reflect reusable backend patterns,
+                        authentication design, and architecture-oriented thinking.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <article class="detailed-project-card h-100">
+                        <div class="detailed-project-top">
+                            <span class="detailed-project-type">Authentication Service</span>
+                            <span class="detailed-project-year">2026</span>
+                        </div>
+
+                        <h3 class="detailed-project-title">JWT Auth & Role-Based Access Module</h3>
+
+                        <p class="detailed-project-text">
+                            A backend module focused on authentication flow, token handling,
+                            route protection, and role-based access control for secure APIs.
+                        </p>
+
+                        <div class="detailed-project-tags">
+                            <span class="project-preview-tag">FastAPI</span>
+                            <span class="project-preview-tag">JWT</span>
+                            <span class="project-preview-tag">RBAC</span>
+                            <span class="project-preview-tag">Security</span>
+                        </div>
+
+                        <ul class="detailed-project-points">
+                            <li>Secure login and token lifecycle handling</li>
+                            <li>Clear separation of auth logic and route logic</li>
+                            <li>Reusable structure for future systems</li>
+                        </ul>
+
+                        <div class="project-preview-footer mt-auto">
+                            <a href="contact.html" class="btn btn-accent btn-sm">Request Details</a>
+                            <a href="https://github.com/mdnaimul16" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-outline-theme btn-sm">GitHub</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="detailed-project-card h-100">
+                        <div class="detailed-project-top">
+                            <span class="detailed-project-type">Engineering Boilerplate</span>
+                            <span class="detailed-project-year">2026</span>
+                        </div>
+
+                        <h3 class="detailed-project-title">FastAPI Clean Architecture Boilerplate</h3>
+
+                        <p class="detailed-project-text">
+                            A reusable starter structure that accelerates backend development
+                            with organized modules, service boundaries, and readable project layout.
+                        </p>
+
+                        <div class="detailed-project-tags">
+                            <span class="project-preview-tag">Python</span>
+                            <span class="project-preview-tag">FastAPI</span>
+                            <span class="project-preview-tag">Boilerplate</span>
+                            <span class="project-preview-tag">Architecture</span>
+                        </div>
+
+                        <ul class="detailed-project-points">
+                            <li>Consistent folder structure for backend teams</li>
+                            <li>Readable separation of responsibilities</li>
+                            <li>Good foundation for scalable projects</li>
+                        </ul>
+
+                        <div class="project-preview-footer mt-auto">
+                            <a href="architecture.html" class="btn btn-accent btn-sm">View Concept</a>
+                            <a href="contact.html" class="btn btn-outline-theme btn-sm">Discuss Use Case</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="detailed-project-card h-100">
+                        <div class="detailed-project-top">
+                            <span class="detailed-project-type">Database-Oriented Backend</span>
+                            <span class="detailed-project-year">2026</span>
+                        </div>
+
+                        <h3 class="detailed-project-title">Inventory & Sales Data Workflow Design</h3>
+
+                        <p class="detailed-project-text">
+                            A backend-oriented project concept centered on product inventory,
+                            transaction flow, and business-friendly data consistency.
+                        </p>
+
+                        <div class="detailed-project-tags">
+                            <span class="project-preview-tag">PostgreSQL</span>
+                            <span class="project-preview-tag">Schema Design</span>
+                            <span class="project-preview-tag">Business Logic</span>
+                            <span class="project-preview-tag">Backend</span>
+                        </div>
+
+                        <ul class="detailed-project-points">
+                            <li>Database structure that supports business operations</li>
+                            <li>Clear flow from request to persistence</li>
+                            <li>Designed for extensibility and reporting</li>
+                        </ul>
+
+                        <div class="project-preview-footer mt-auto">
+                            <a href="system-design.html" class="btn btn-accent btn-sm">System Design</a>
+                            <a href="contact.html" class="btn btn-outline-theme btn-sm">Talk Backend</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         ENGINEERING APPROACH SECTION
+         ====================================== -->
+    <section class="section-spacing section-engineering-approach">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="engineering-approach-card h-100">
+                        <h3 class="engineering-approach-title">How I evaluate a backend project</h3>
+
+                        <ul class="engineering-approach-list">
+                            <li>Is the business logic clearly separated from route handlers?</li>
+                            <li>Can the data access layer evolve without breaking service logic?</li>
+                            <li>Is the system readable enough for another developer to extend?</li>
+                            <li>Does the API design stay consistent across modules?</li>
+                            <li>Is the architecture suitable for growth and maintenance?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="engineering-approach-card h-100">
+                        <h3 class="engineering-approach-title">What recruiters should notice here</h3>
+
+                        <p class="engineering-approach-text">
+                            These projects are intentionally presented as engineering case studies,
+                            not just screenshots or simple demos. The goal is to show structured
+                            backend thinking, architecture clarity, and professional project communication.
+                        </p>
+
+                        <div class="mt-4 d-flex flex-wrap gap-3">
+                            <a href="blog.html" class="btn btn-accent">Technical Writing</a>
+                            <a href="contact.html" class="btn btn-outline-theme">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         PROJECT CTA
+         ====================================== -->
+    <section class="section-spacing section-project-page-cta">
+        <div class="container">
+            <div class="project-page-cta-box">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="project-page-cta-title">
+                            Interested in how I build backend systems?
+                        </h2>
+                        <p class="project-page-cta-text mb-0">
+                            I am especially interested in backend engineering roles where clean architecture,
+                            API quality, and maintainable service design matter.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-accent btn-lg">Let’s Connect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     FOOTER
+     ====================================== -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand-block">
+
+                        <a href="index.html" class="footer-brand">Md. Naimul Islam</a>
+
+                        <p class="footer-brand-text">
+                            I am a Backend Developer focused on building scalable and maintainable systems using Python, 
+                            FastAPI, PostgreSQL, and clean architecture principles.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/mdnaimul404"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/naimul404/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:md.naimul16@gmail.com"
+                               class="footer-social-link"
+                               aria-label="Email">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <!-- Resume -->
+                            <a href="resume/md_naimul_islam_resume.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="Resume">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">Navigation</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="system-design.html">System Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">More</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="resume/md_naimul_islam_resume.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   Resume
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/mdnaimul404"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/naimul404/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="footer-contact-block">
+                        <h3 class="footer-block-title">Professional Focus</h3>
+
+                        <ul class="footer-focus-list">
+                            <li>Backend Engineering</li>
+                            <li>FastAPI API Development</li>
+                            <li>PostgreSQL Database Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maintainable Backend Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">
+                        © 2026 Md. Naimul Islam. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-bottom-text mb-0">
+                        Built with HTML, CSS, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

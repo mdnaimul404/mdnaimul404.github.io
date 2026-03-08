@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!--
+        =========================================================
+        Portfolio: Md. Naimul Islam
+        Page     : Blog
+        Stack    : HTML + Bootstrap 5 + Vanilla JavaScript
+        Purpose  : Showcase technical writing and backend thinking
+        =========================================================
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Technical writing by Md. Naimul Islam. Backend engineering notes, FastAPI architecture, system design thinking, and software engineering articles.">
+
+    <title>Blog | Md. Naimul Islam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+    <!-- ======================================
+         NAVBAR
+         ====================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo" href="index.html">NAIMUL</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="architecture.html">Architecture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="system-design.html">System Design</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Theme Selector -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <div class="theme-switcher d-flex align-items-center gap-2">
+                            <button class="btn btn-sm theme-btn" data-theme-value="dark" title="Dark mode"
+                                aria-label="Switch to dark mode">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="light" title="Light mode"
+                                aria-label="Switch to light mode">
+                                <i class="bi bi-sun"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="system" title="System theme"
+                                aria-label="Use system theme">
+                                <i class="bi bi-display"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================
+         PAGE HERO
+         ====================================== -->
+    <section class="inner-page-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Technical Writing</span>
+
+                    <h1 class="inner-page-title">
+                        Writing is part of my engineering process, not separate from it.
+                    </h1>
+
+                    <p class="inner-page-description mt-4">
+                        I use technical writing to explain backend architecture, design choices,
+                        maintainability patterns, and practical engineering trade-offs.
+                        Strong writing helps me communicate clearly with teams, recruiters,
+                        and other developers.
+                    </p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="#featured-article" class="btn btn-accent btn-lg">Read Featured Article</a>
+                        <a href="projects.html" class="btn btn-outline-theme btn-lg">See Projects</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="page-summary-card">
+                        <h3 class="page-summary-title">Writing Focus</h3>
+
+                        <ul class="page-summary-list">
+                            <li>FastAPI architecture</li>
+                            <li>Backend maintainability</li>
+                            <li>Repository pattern</li>
+                            <li>System design thinking</li>
+                            <li>Professional engineering communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         WRITING OVERVIEW
+         ====================================== -->
+    <section class="section-spacing section-writing-overview">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3">
+                    <div class="writing-metric-card h-100">
+                        <div class="writing-metric-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <span class="writing-metric-number">4+</span>
+                        <span class="writing-metric-label">Planned technical articles</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="writing-metric-card h-100">
+                        <div class="writing-metric-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <span class="writing-metric-number">Backend</span>
+                        <span class="writing-metric-label">Primary writing domain</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="writing-metric-card h-100">
+                        <div class="writing-metric-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <span class="writing-metric-number">Architecture</span>
+                        <span class="writing-metric-label">Core content theme</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="writing-metric-card h-100">
+                        <div class="writing-metric-icon">
+                            <i class="bi bi-braces"></i>
+                        </div>
+                        <span class="writing-metric-number">Practical</span>
+                        <span class="writing-metric-label">Engineer-focused explanations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         FEATURED ARTICLE
+         ====================================== -->
+    <section id="featured-article" class="section-spacing section-featured-article">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Featured Article</span>
+                    <h2 class="section-title mb-3">Writing that reflects engineering depth</h2>
+                    <p class="section-description">
+                        The featured article highlights how I explain architecture in a practical, recruiter-friendly way.
+                    </p>
+                </div>
+            </div>
+
+            <div class="featured-article-card">
+                <div class="row g-5 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="featured-article-content">
+                            <div class="blog-preview-meta mb-3">
+                                <span class="blog-preview-category">Architecture</span>
+                                <span class="blog-preview-separator">•</span>
+                                <span class="blog-preview-readtime">6 min read</span>
+                            </div>
+
+                            <h3 class="featured-article-title">
+                                Building Clean Architecture in FastAPI: Route, Service, Repository, and DB
+                            </h3>
+
+                            <p class="featured-article-text mt-3">
+                                This article explains how I think about separating responsibilities in a FastAPI project.
+                                Instead of mixing route logic, business rules, and database access in one place,
+                                I prefer a layered approach that keeps the system readable and easier to scale.
+                            </p>
+
+                            <div class="row g-3 mt-4">
+                                <div class="col-md-6">
+                                    <div class="article-info-box">
+                                        <h4 class="article-info-title">What it covers</h4>
+                                        <ul class="article-info-list">
+                                            <li>Why layered structure matters</li>
+                                            <li>Role of service and repository layers</li>
+                                            <li>Cleaner backend flow in FastAPI</li>
+                                            <li>Maintainability benefits</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="article-info-box">
+                                        <h4 class="article-info-title">Why it matters</h4>
+                                        <ul class="article-info-list">
+                                            <li>Shows architecture clarity</li>
+                                            <li>Communicates engineering maturity</li>
+                                            <li>Helps recruiters see thought process</li>
+                                            <li>Supports backend credibility</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 d-flex flex-wrap gap-3">
+                                <a href="#articles-grid" class="btn btn-accent">Explore More Articles</a>
+                                <a href="architecture.html" class="btn btn-outline-theme">Architecture Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="article-highlight-card h-100">
+                            <h3 class="article-highlight-title">Writing style goals</h3>
+
+                            <div class="article-highlight-list">
+                                <div class="article-highlight-item">
+                                    <span class="article-highlight-label">Tone</span>
+                                    <span class="article-highlight-value">Clear and professional</span>
+                                </div>
+
+                                <div class="article-highlight-item">
+                                    <span class="article-highlight-label">Focus</span>
+                                    <span class="article-highlight-value">Backend engineering</span>
+                                </div>
+
+                                <div class="article-highlight-item">
+                                    <span class="article-highlight-label">Approach</span>
+                                    <span class="article-highlight-value">Practical explanations</span>
+                                </div>
+
+                                <div class="article-highlight-item">
+                                    <span class="article-highlight-label">Audience</span>
+                                    <span class="article-highlight-value">Recruiters and developers</span>
+                                </div>
+
+                                <div class="article-highlight-item">
+                                    <span class="article-highlight-label">Strength</span>
+                                    <span class="article-highlight-value">Architecture thinking</span>
+                                </div>
+                            </div>
+
+                            <div class="writing-quote-box mt-4">
+                                <p class="writing-quote-text mb-0">
+                                    “Good technical writing makes backend thinking visible.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         ARTICLES GRID
+         ====================================== -->
+    <section id="articles-grid" class="section-spacing section-articles-grid">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Articles</span>
+                    <h2 class="section-title mb-3">Backend articles and engineering notes</h2>
+                    <p class="section-description">
+                        These article concepts help present your technical thinking in a stronger professional format.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <article class="article-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">Architecture</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">6 min read</span>
+                        </div>
+
+                        <h3 class="article-card-title">
+                            Building Clean Architecture in FastAPI
+                        </h3>
+
+                        <p class="article-card-text">
+                            A practical explanation of how to structure FastAPI applications
+                            using route, service, repository, and database layers.
+                        </p>
+
+                        <div class="article-card-tags">
+                            <span class="article-card-tag">FastAPI</span>
+                            <span class="article-card-tag">Architecture</span>
+                            <span class="article-card-tag">Python</span>
+                        </div>
+
+                        <div class="blog-preview-footer mt-auto">
+                            <span class="blog-preview-date">Published 2026</span>
+                            <a href="#" class="blog-preview-link">Read Concept <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="article-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">Maintainability</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">5 min read</span>
+                        </div>
+
+                        <h3 class="article-card-title">
+                            Why Repository Pattern Improves Backend Maintainability
+                        </h3>
+
+                        <p class="article-card-text">
+                            A clear explanation of how separating data access from business logic
+                            makes backend systems easier to extend and reason about.
+                        </p>
+
+                        <div class="article-card-tags">
+                            <span class="article-card-tag">Repository</span>
+                            <span class="article-card-tag">Backend</span>
+                            <span class="article-card-tag">Design</span>
+                        </div>
+
+                        <div class="blog-preview-footer mt-auto">
+                            <span class="blog-preview-date">Published 2026</span>
+                            <a href="#" class="blog-preview-link">Read Concept <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="article-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">System Design</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">7 min read</span>
+                        </div>
+
+                        <h3 class="article-card-title">
+                            Designing a Grocery POS Backend for Real Business Workflows
+                        </h3>
+
+                        <p class="article-card-text">
+                            A practical write-up on backend structure, inventory logic,
+                            sales workflow consistency, and module separation.
+                        </p>
+
+                        <div class="article-card-tags">
+                            <span class="article-card-tag">POS</span>
+                            <span class="article-card-tag">Backend</span>
+                            <span class="article-card-tag">System Design</span>
+                        </div>
+
+                        <div class="blog-preview-footer mt-auto">
+                            <span class="blog-preview-date">Published 2026</span>
+                            <a href="#" class="blog-preview-link">Read Concept <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="article-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">API Design</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">5 min read</span>
+                        </div>
+
+                        <h3 class="article-card-title">
+                            Writing Cleaner Route Handlers in FastAPI
+                        </h3>
+
+                        <p class="article-card-text">
+                            A focused article about keeping API endpoints thin
+                            and moving business decisions into the correct layer.
+                        </p>
+
+                        <div class="article-card-tags">
+                            <span class="article-card-tag">API</span>
+                            <span class="article-card-tag">FastAPI</span>
+                            <span class="article-card-tag">Clean Code</span>
+                        </div>
+
+                        <div class="blog-preview-footer mt-auto">
+                            <span class="blog-preview-date">Planned Article</span>
+                            <a href="#" class="blog-preview-link">Read Concept <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="article-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">Backend Thinking</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">4 min read</span>
+                        </div>
+
+                        <h3 class="article-card-title">
+                            How I Think About Maintainable Backend Structure
+                        </h3>
+
+                        <p class="article-card-text">
+                            A concise engineering note about boundaries, readability,
+                            folder structure, and long-term codebase health.
+                        </p>
+
+                        <div class="article-card-tags">
+                            <span class="article-card-tag">Maintainability</span>
+                            <span class="article-card-tag">Structure</span>
+                            <span class="article-card-tag">Engineering</span>
+                        </div>
+
+                        <div class="blog-preview-footer mt-auto">
+                            <span class="blog-preview-date">Planned Article</span>
+                            <a href="#" class="blog-preview-link">Read Concept <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <article class="article-card h-100">
+                        <div class="blog-preview-meta">
+                            <span class="blog-preview-category">Database Design</span>
+                            <span class="blog-preview-separator">•</span>
+                            <span class="blog-preview-readtime">5 min read</span>
+                        </div>
+
+                        <h3 class="article-card-title">
+                            Designing PostgreSQL Schemas for Backend Growth
+                        </h3>
+
+                        <p class="article-card-text">
+                            A practical article idea focused on relational structure,
+                            consistency, and schema decisions that support growth.
+                        </p>
+
+                        <div class="article-card-tags">
+                            <span class="article-card-tag">PostgreSQL</span>
+                            <span class="article-card-tag">Schema</span>
+                            <span class="article-card-tag">Database</span>
+                        </div>
+
+                        <div class="blog-preview-footer mt-auto">
+                            <span class="blog-preview-date">Planned Article</span>
+                            <a href="#" class="blog-preview-link">Read Concept <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         WRITING BENEFITS
+         ====================================== -->
+    <section class="section-spacing section-writing-benefits">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="writing-benefits-card h-100">
+                        <h3 class="writing-benefits-title">Why technical writing matters in this portfolio</h3>
+
+                        <ul class="writing-benefits-list">
+                            <li>Shows that I understand backend concepts deeply</li>
+                            <li>Demonstrates clear engineering communication</li>
+                            <li>Makes architecture thinking visible to recruiters</li>
+                            <li>Strengthens credibility beyond code screenshots</li>
+                            <li>Reflects professionalism in documentation and explanation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="writing-benefits-card h-100">
+                        <h3 class="writing-benefits-title">What I want readers to feel</h3>
+
+                        <p class="writing-benefits-text">
+                            I want readers to feel that my writing is practical, thoughtful,
+                            and grounded in real backend engineering. The goal is not just to sound technical,
+                            but to explain things clearly enough that the value of good architecture becomes obvious.
+                        </p>
+
+                        <div class="mt-4 d-flex flex-wrap gap-3">
+                            <a href="architecture.html" class="btn btn-accent">Architecture</a>
+                            <a href="system-design.html" class="btn btn-outline-theme">System Design</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         WRITING PROCESS
+         ====================================== -->
+    <section class="section-spacing section-writing-process">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Process</span>
+                    <h2 class="section-title mb-3">How I approach technical writing</h2>
+                    <p class="section-description">
+                        My writing process is meant to turn engineering experience into clear and useful communication.
+                    </p>
+                </div>
+            </div>
+
+            <div class="writing-process-card">
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="writing-process-step h-100">
+                            <span class="writing-process-number">01</span>
+                            <h3 class="writing-process-title">Choose a real backend topic</h3>
+                            <p class="writing-process-text">
+                                Start from practical engineering problems instead of abstract theory.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="writing-process-step h-100">
+                            <span class="writing-process-number">02</span>
+                            <h3 class="writing-process-title">Explain the problem clearly</h3>
+                            <p class="writing-process-text">
+                                Make the reader understand why the topic matters in real systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="writing-process-step h-100">
+                            <span class="writing-process-number">03</span>
+                            <h3 class="writing-process-title">Present a practical structure</h3>
+                            <p class="writing-process-text">
+                                Show how architecture, patterns, or design choices solve the problem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="writing-process-step h-100">
+                            <span class="writing-process-number">04</span>
+                            <h3 class="writing-process-title">Keep the explanation readable</h3>
+                            <p class="writing-process-text">
+                                Make technical depth understandable without losing engineering quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         CTA SECTION
+         ====================================== -->
+    <section class="section-spacing section-blog-page-cta">
+        <div class="container">
+            <div class="blog-page-cta-box">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="blog-page-cta-title">
+                            Looking for a backend engineer who can both build and explain systems clearly?
+                        </h2>
+                        <p class="blog-page-cta-text mb-0">
+                            I am especially interested in backend roles where architecture quality,
+                            maintainability, and strong technical communication are valued.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-accent btn-lg">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     FOOTER
+     ====================================== -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand-block">
+
+                        <a href="index.html" class="footer-brand">Md. Naimul Islam</a>
+
+                        <p class="footer-brand-text">
+                            I am a Backend Developer focused on building scalable and maintainable systems using Python, 
+                            FastAPI, PostgreSQL, and clean architecture principles.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/mdnaimul404"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/naimul404/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:md.naimul16@gmail.com"
+                               class="footer-social-link"
+                               aria-label="Email">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <!-- Resume -->
+                            <a href="resume/md_naimul_islam_resume.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="Resume">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">Navigation</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="system-design.html">System Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">More</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="resume/md_naimul_islam_resume.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   Resume
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/mdnaimul404"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/naimul404/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="footer-contact-block">
+                        <h3 class="footer-block-title">Professional Focus</h3>
+
+                        <ul class="footer-focus-list">
+                            <li>Backend Engineering</li>
+                            <li>FastAPI API Development</li>
+                            <li>PostgreSQL Database Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maintainable Backend Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">
+                        © 2026 Md. Naimul Islam. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-bottom-text mb-0">
+                        Built with HTML, CSS, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

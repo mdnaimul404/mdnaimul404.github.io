@@ -1,0 +1,3050 @@
+/*
+=========================================================
+Main Stylesheet
+Author  : Md. Naimul Islam
+Purpose : Shared layout, components, utilities
+=========================================================
+*/
+
+/* =====================================
+   Base Reset / Global Rules
+   ===================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* =====================================
+   Shared Layout
+   ===================================== */
+.section-spacing {
+    padding: 6rem 0;
+}
+
+.hero-section {
+    min-height: 100vh;
+    padding-top: 90px;
+    position: relative;
+}
+
+.section-title {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+}
+
+.section-description {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Navbar
+   ===================================== */
+.custom-navbar {
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.brand-logo {
+    color: var(--heading-color) !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.custom-navbar .nav-link {
+    color: var(--nav-link-color) !important;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.custom-toggler {
+    border-color: var(--border-color);
+}
+
+/* =====================================
+   Theme Switcher
+   ===================================== */
+.theme-switcher {
+    padding: 0.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background-color: var(--theme-switcher-bg);
+}
+
+.theme-btn {
+    border: none;
+    border-radius: 999px;
+    color: var(--muted-color);
+    background-color: transparent;
+    width: 38px;
+    height: 38px;
+    transition: all 0.25s ease;
+}
+
+.theme-btn:hover {
+    color: var(--heading-color);
+    background-color: var(--theme-btn-hover-bg);
+}
+
+.theme-btn.active {
+    color: var(--active-theme-btn-text);
+    background-color: var(--active-theme-btn-bg);
+}
+
+/* =====================================
+   Hero
+   ===================================== */
+.hero-title {
+    color: var(--heading-color);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.hero-text {
+    color: var(--muted-color);
+    min-height: 40px;
+    font-size: 1.25rem;
+}
+
+.hero-description {
+    max-width: 700px;
+    color: var(--muted-color);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.section-badge {
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--accent-color);
+    background-color: var(--badge-bg);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* =====================================
+   Typing Cursor
+   ===================================== */
+.typing-cursor {
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--accent-color);
+    animation: blinkCursor 0.8s infinite;
+    font-weight: 700;
+}
+
+@keyframes blinkCursor {
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/* =====================================
+   Profile Panel
+   ===================================== */
+.profile-panel {
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--panel-bg);
+    box-shadow: var(--panel-shadow);
+}
+
+.profile-panel-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--panel-header-bg);
+}
+
+.profile-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-red {
+    background-color: #ef4444;
+}
+
+.dot-yellow {
+    background-color: #f59e0b;
+}
+
+.dot-green {
+    background-color: #22c55e;
+}
+
+.profile-file-name {
+    color: var(--muted-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.profile-code-block {
+    padding: 1.5rem;
+}
+
+.profile-code-block pre {
+    margin: 0;
+    overflow-x: auto;
+    color: var(--code-text-color);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* =====================================
+   Buttons
+   ===================================== */
+.btn-accent {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-contrast);
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--accent-contrast);
+}
+
+.btn-outline-theme {
+    border: 1px solid var(--border-strong);
+    color: var(--heading-color);
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-theme:hover {
+    background-color: var(--outline-hover-bg);
+    color: var(--heading-color);
+}
+
+/* =====================================
+   Skills Section
+   ===================================== */
+.section-skills {
+    position: relative;
+}
+
+.skill-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.skill-card-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card-title {
+    color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li + li {
+    margin-top: 1rem;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 0.45rem;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 9px;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: var(--progress-track-bg);
+}
+
+.skill-progress-bar {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+}
+
+.skills-summary-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--summary-box-bg);
+    box-shadow: var(--summary-box-shadow);
+}
+
+.skills-summary-title {
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.skills-summary-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Featured Project Section
+   ===================================== */
+.section-featured-project {
+    position: relative;
+}
+
+.featured-project-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--featured-card-bg);
+    box-shadow: var(--featured-card-shadow);
+}
+
+.project-meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.project-tech-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background-color: var(--project-badge-bg);
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.featured-project-title {
+    color: var(--heading-color);
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.featured-project-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+.project-info-box {
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--project-info-bg);
+}
+
+.project-info-title {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+}
+
+.project-info-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+.project-stat-box {
+    height: 100%;
+    padding: 1.2rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background: var(--stat-box-bg);
+    text-align: center;
+}
+
+.project-stat-number {
+    display: block;
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.project-stat-label {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+.architecture-flow-card {
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--flow-card-bg);
+    box-shadow: var(--flow-card-shadow);
+}
+
+.architecture-flow-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--flow-header-bg);
+}
+
+.architecture-flow-title {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.architecture-flow-body {
+    padding: 1.5rem;
+}
+
+.flow-step {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: var(--flow-step-bg);
+    color: var(--heading-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+.flow-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    padding: 0.65rem 0;
+}
+
+/* =====================================
+   Projects Preview Section
+   ===================================== */
+.section-projects-preview {
+    position: relative;
+}
+
+.project-preview-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--project-preview-bg);
+    box-shadow: var(--project-preview-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-preview-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--project-preview-shadow-hover);
+}
+
+.project-preview-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-preview-type,
+.project-preview-year {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted-color);
+}
+
+.project-preview-title {
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+}
+
+.project-preview-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.project-preview-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-preview-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background-color: var(--project-preview-tag-bg);
+    color: var(--accent-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.project-preview-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.projects-preview-cta {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--projects-cta-bg);
+    box-shadow: var(--projects-cta-shadow);
+}
+
+.projects-preview-cta-title {
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.projects-preview-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   System Architecture Section
+   ===================================== */
+.section-system-architecture {
+    position: relative;
+}
+
+.architecture-principles-card,
+.system-architecture-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--architecture-card-bg);
+    box-shadow: var(--architecture-card-shadow);
+}
+
+.system-architecture-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.system-architecture-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--architecture-header-bg);
+}
+
+.system-architecture-body {
+    padding: 1.5rem;
+}
+
+.architecture-block-title {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.architecture-block-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+}
+
+.architecture-principle-box {
+    height: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--architecture-inner-box-bg);
+}
+
+.architecture-principle-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+}
+
+.architecture-principle-title {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+}
+
+.architecture-principle-text {
+    color: var(--muted-color);
+    line-height: 1.75;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.system-flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.system-flow-index {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: var(--system-flow-index-bg);
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+}
+
+.system-flow-content h4 {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.system-flow-content p {
+    color: var(--muted-color);
+    line-height: 1.75;
+    margin-bottom: 0;
+    font-size: 0.96rem;
+}
+
+.system-flow-connector {
+    width: 2px;
+    height: 26px;
+    margin: 0.75rem 0 0.75rem 22px;
+    background: linear-gradient(180deg, var(--accent-color), transparent);
+    opacity: 0.6;
+}
+
+.architecture-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-cta-bg);
+    box-shadow: var(--architecture-cta-shadow);
+}
+
+.architecture-cta-title {
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.architecture-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   GitHub Activity Section
+   ===================================== */
+.section-github-activity {
+    position: relative;
+}
+
+.github-stat-card {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--github-stat-bg);
+    box-shadow: var(--github-stat-shadow);
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.github-stat-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--github-stat-shadow-hover);
+}
+
+.github-stat-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+}
+
+.github-stat-number {
+    display: block;
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.github-stat-label {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--muted-color);
+    font-size: 0.95rem;
+}
+
+.github-repositories-card,
+.github-summary-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--github-card-bg);
+    box-shadow: var(--github-card-shadow);
+}
+
+.github-card-header {
+    margin-bottom: 1.25rem;
+}
+
+.github-card-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.github-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.repo-highlight-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.15rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--github-repo-item-bg);
+}
+
+.repo-highlight-main h4 {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.repo-highlight-main p {
+    color: var(--muted-color);
+    line-height: 1.75;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.repo-language-badge {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background-color: var(--project-preview-tag-bg);
+    color: var(--accent-color);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.github-summary-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.github-summary-list {
+    padding-left: 1.1rem;
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+}
+
+.github-summary-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.github-contribution-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--github-contribution-bg);
+    box-shadow: var(--github-contribution-shadow);
+}
+
+.github-contribution-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.github-contribution-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Blog Preview Section
+   ===================================== */
+.section-blog-preview {
+    position: relative;
+}
+
+.blog-preview-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--blog-card-bg);
+    box-shadow: var(--blog-card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-preview-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--blog-card-shadow-hover);
+}
+
+.blog-preview-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.blog-preview-category {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.blog-preview-separator,
+.blog-preview-readtime {
+    color: var(--muted-color);
+}
+
+.blog-preview-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.blog-preview-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.blog-preview-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.blog-preview-date {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+.blog-preview-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: opacity 0.2s ease;
+}
+
+.blog-preview-link:hover {
+    opacity: 0.8;
+    color: var(--accent-color);
+}
+
+.blog-preview-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--blog-cta-bg);
+    box-shadow: var(--blog-cta-shadow);
+}
+
+.blog-preview-cta-title {
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.blog-preview-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Timeline Section
+   ===================================== */
+.section-timeline {
+    position: relative;
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.timeline-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 22px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-color), transparent);
+    opacity: 0.45;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.timeline-item + .timeline-item {
+    margin-top: 1.75rem;
+}
+
+.timeline-marker {
+    position: relative;
+    width: 46px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-marker-dot {
+    width: 18px;
+    height: 18px;
+    margin-top: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 0 6px var(--timeline-dot-ring);
+    z-index: 1;
+}
+
+.timeline-card {
+    flex: 1;
+    padding: 1.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--timeline-card-bg);
+    box-shadow: var(--timeline-card-shadow);
+}
+
+.timeline-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+}
+
+.timeline-year {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.timeline-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background-color: var(--timeline-badge-bg);
+    color: var(--muted-color);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.timeline-title {
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.timeline-subtitle {
+    color: var(--muted-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+}
+
+.timeline-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Contact CTA Section
+   ===================================== */
+.section-contact-cta {
+    position: relative;
+    padding-top: 0;
+}
+
+.contact-cta-card {
+    padding: 2.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--contact-cta-bg);
+    box-shadow: var(--contact-cta-shadow);
+}
+
+.contact-cta-title {
+    color: var(--heading-color);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.contact-cta-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+    max-width: 760px;
+}
+
+.contact-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =====================================
+   Footer
+   ===================================== */
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    color: var(--muted-color);
+    background-color: var(--footer-bg);
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+/* =====================================
+   Responsive Adjustments
+   ===================================== */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .featured-project-title,
+    .contact-cta-title {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 2.15rem;
+    }
+
+    .hero-text {
+        font-size: 1.05rem;
+    }
+
+    .profile-code-block pre {
+        font-size: 0.85rem;
+    }
+
+    .skill-card,
+    .skills-summary-box,
+    .featured-project-card,
+    .project-preview-card,
+    .projects-preview-cta,
+    .architecture-principles-card,
+    .architecture-cta-box,
+    .github-stat-card,
+    .github-repositories-card,
+    .github-summary-card,
+    .github-contribution-box,
+    .blog-preview-card,
+    .blog-preview-cta-box,
+    .timeline-card,
+    .contact-cta-card {
+        padding: 1.35rem;
+    }
+
+    .system-architecture-header,
+    .system-architecture-body {
+        padding: 1.2rem;
+    }
+
+    .featured-project-title,
+    .contact-cta-title {
+        font-size: 1.45rem;
+    }
+
+    .project-preview-title,
+    .blog-preview-title,
+    .timeline-title {
+        font-size: 1.2rem;
+    }
+
+    .architecture-block-title,
+    .github-card-title,
+    .blog-preview-cta-title {
+        font-size: 1.2rem;
+    }
+
+    .repo-highlight-item,
+    .blog-preview-footer,
+    .timeline-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item {
+        gap: 1rem;
+    }
+
+    .timeline-wrapper::before {
+        left: 17px;
+    }
+
+    .timeline-marker {
+        width: 34px;
+    }
+
+    .timeline-marker-dot {
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+/*#################################################
+
+
+
+/* =====================================
+   Inner Page Hero
+   ===================================== */
+.inner-page-hero {
+    min-height: 70vh;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.inner-page-title {
+    color: var(--heading-color);
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+.inner-page-description {
+    color: var(--muted-color);
+    font-size: 1.08rem;
+    line-height: 1.9;
+    max-width: 760px;
+}
+
+.page-summary-card {
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+}
+
+.page-summary-title {
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-summary-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+/* =====================================
+   Projects Overview Metrics
+   ===================================== */
+.section-projects-overview {
+    position: relative;
+}
+
+.portfolio-metric-card {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--github-stat-bg);
+    box-shadow: var(--github-stat-shadow);
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-metric-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--github-stat-shadow-hover);
+}
+
+.portfolio-metric-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+}
+
+.portfolio-metric-number {
+    display: block;
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.portfolio-metric-label {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--muted-color);
+    font-size: 0.95rem;
+}
+
+/* =====================================
+   Project Case Study
+   ===================================== */
+.section-project-case-study {
+    position: relative;
+}
+
+.project-case-study-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--featured-card-bg);
+    box-shadow: var(--featured-card-shadow);
+}
+
+.case-study-title {
+    color: var(--heading-color);
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.case-study-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+.case-study-block {
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--project-info-bg);
+}
+
+.case-study-block-title {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.case-study-block-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.case-study-sidebar {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--flow-card-bg);
+    box-shadow: var(--flow-card-shadow);
+}
+
+.case-study-sidebar-title {
+    color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.case-study-highlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.case-study-highlight-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    background: var(--flow-step-bg);
+}
+
+.case-study-highlight-label {
+    color: var(--muted-color);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.case-study-highlight-value {
+    color: var(--heading-color);
+    font-size: 0.94rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* =====================================
+   Detailed Project Grid
+   ===================================== */
+.section-project-grid {
+    position: relative;
+}
+
+.detailed-project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--project-preview-bg);
+    box-shadow: var(--project-preview-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detailed-project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--project-preview-shadow-hover);
+}
+
+.detailed-project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.detailed-project-type,
+.detailed-project-year {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted-color);
+}
+
+.detailed-project-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+}
+
+.detailed-project-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+}
+
+.detailed-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+}
+
+.detailed-project-points {
+    padding-left: 1.1rem;
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+}
+
+/* =====================================
+   Engineering Approach
+   ===================================== */
+.section-engineering-approach {
+    position: relative;
+}
+
+.engineering-approach-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-card-bg);
+    box-shadow: var(--architecture-card-shadow);
+}
+
+.engineering-approach-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.engineering-approach-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.95;
+}
+
+.engineering-approach-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Project Page CTA
+   ===================================== */
+.section-project-page-cta {
+    position: relative;
+}
+
+.project-page-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--projects-cta-bg);
+    box-shadow: var(--projects-cta-shadow);
+}
+
+.project-page-cta-title {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.project-page-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Responsive Adjustments for Projects Page
+   ===================================== */
+@media (max-width: 991.98px) {
+    .inner-page-title {
+        font-size: 2.4rem;
+    }
+
+    .case-study-title {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .inner-page-title {
+        font-size: 2rem;
+    }
+
+    .page-summary-card,
+    .portfolio-metric-card,
+    .project-case-study-card,
+    .case-study-sidebar,
+    .detailed-project-card,
+    .engineering-approach-card,
+    .project-page-cta-box {
+        padding: 1.35rem;
+    }
+
+    .case-study-highlight-item,
+    .detailed-project-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .case-study-highlight-value {
+        text-align: left;
+    }
+}
+
+
+
+/*################################################
+
+
+
+/* =====================================
+   Architecture Page - Principles
+   ===================================== */
+.section-architecture-principles-page {
+    position: relative;
+}
+
+.architecture-principle-page-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.architecture-principle-page-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.architecture-principle-page-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.architecture-principle-page-title {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.architecture-principle-page-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Architecture Page - Flow
+   ===================================== */
+.section-architecture-flow-page {
+    position: relative;
+}
+
+.architecture-flow-page-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--featured-card-bg);
+    box-shadow: var(--featured-card-shadow);
+}
+
+.architecture-flow-page-left,
+.architecture-flow-page-right {
+    height: 100%;
+}
+
+.flow-page-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.flow-page-step-index {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: var(--system-flow-index-bg);
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.flow-page-step-content h4 {
+    color: var(--heading-color);
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.flow-page-step-content p {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.flow-page-connector {
+    width: 2px;
+    height: 28px;
+    margin: 0.8rem 0 0.8rem 23px;
+    background: linear-gradient(180deg, var(--accent-color), transparent);
+    opacity: 0.6;
+}
+
+.architecture-flow-page-right {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--flow-card-bg);
+    box-shadow: var(--flow-card-shadow);
+}
+
+.architecture-side-title {
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.architecture-side-point + .architecture-side-point {
+    margin-top: 1.15rem;
+}
+
+.architecture-side-point h4 {
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.architecture-side-point p {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Architecture Page - Responsibilities
+   ===================================== */
+.section-layer-responsibilities {
+    position: relative;
+}
+
+.responsibility-card {
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-card-bg);
+    box-shadow: var(--architecture-card-shadow);
+}
+
+.responsibility-card-title {
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.responsibility-block + .responsibility-block {
+    margin-top: 1.25rem;
+}
+
+.responsibility-block h4 {
+    color: var(--accent-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.responsibility-block ul {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+/* =====================================
+   Architecture Page - Benefits
+   ===================================== */
+.section-architecture-benefits {
+    position: relative;
+}
+
+.architecture-benefits-card {
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--projects-cta-bg);
+    box-shadow: var(--projects-cta-shadow);
+}
+
+.architecture-benefits-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.architecture-benefits-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.95;
+}
+
+.architecture-benefits-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Architecture Page - Code Structure
+   ===================================== */
+.section-code-structure-example {
+    position: relative;
+}
+
+.code-structure-card {
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--panel-bg);
+    box-shadow: var(--panel-shadow);
+}
+
+.code-structure-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--panel-header-bg);
+}
+
+.code-structure-title {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.code-structure-body {
+    padding: 1.5rem;
+}
+
+.code-structure-body pre {
+    margin: 0;
+    overflow-x: auto;
+    color: var(--code-text-color);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* =====================================
+   Architecture Page - CTA
+   ===================================== */
+.section-architecture-page-cta {
+    position: relative;
+}
+
+.architecture-page-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-cta-bg);
+    box-shadow: var(--architecture-cta-shadow);
+}
+
+.architecture-page-cta-title {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.architecture-page-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Responsive Adjustments - Architecture Page
+   ===================================== */
+@media (max-width: 991.98px) {
+    .architecture-page-cta-title {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .architecture-principle-page-card,
+    .architecture-flow-page-card,
+    .architecture-flow-page-right,
+    .responsibility-card,
+    .architecture-benefits-card,
+    .architecture-page-cta-box {
+        padding: 1.35rem;
+    }
+
+    .flow-page-step {
+        gap: 0.85rem;
+    }
+
+    .flow-page-step-index {
+        width: 42px;
+        height: 42px;
+        font-size: 0.85rem;
+    }
+
+    .flow-page-connector {
+        margin-left: 20px;
+    }
+
+    .code-structure-body pre {
+        font-size: 0.85rem;
+    }
+}
+
+
+/*####################################################
+
+
+/* =====================================
+   System Design Page - Principles
+   ===================================== */
+.section-design-principles {
+    position: relative;
+}
+
+.design-principle-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.design-principle-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.design-principle-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.design-principle-title {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.design-principle-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   System Design Page - Flow
+   ===================================== */
+.section-system-design-flow {
+    position: relative;
+}
+
+.system-design-flow-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--featured-card-bg);
+    box-shadow: var(--featured-card-shadow);
+}
+
+.system-design-flow-left,
+.system-design-flow-right {
+    height: 100%;
+}
+
+.design-flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.design-flow-step-index {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: var(--system-flow-index-bg);
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.design-flow-step-content h4 {
+    color: var(--heading-color);
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.design-flow-step-content p {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.design-flow-connector {
+    width: 2px;
+    height: 28px;
+    margin: 0.8rem 0 0.8rem 23px;
+    background: linear-gradient(180deg, var(--accent-color), transparent);
+    opacity: 0.6;
+}
+
+.system-design-flow-right {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--flow-card-bg);
+    box-shadow: var(--flow-card-shadow);
+}
+
+.system-design-side-title {
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.system-design-side-point + .system-design-side-point {
+    margin-top: 1.15rem;
+}
+
+.system-design-side-point h4 {
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.system-design-side-point p {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   System Design Page - Dimensions
+   ===================================== */
+.section-design-dimensions {
+    position: relative;
+}
+
+.design-dimension-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-card-bg);
+    box-shadow: var(--architecture-card-shadow);
+}
+
+.design-dimension-title {
+    color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.design-dimension-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.design-dimension-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+/* =====================================
+   System Design Page - POS Case
+   ===================================== */
+.section-pos-design-case {
+    position: relative;
+}
+
+.pos-design-case-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--projects-cta-bg);
+    box-shadow: var(--projects-cta-shadow);
+}
+
+.pos-case-block {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    background: var(--project-info-bg);
+}
+
+.pos-case-title {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pos-case-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+/* =====================================
+   System Design Page - Tradeoffs
+   ===================================== */
+.section-tradeoff-thinking {
+    position: relative;
+}
+
+.tradeoff-card {
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-card-bg);
+    box-shadow: var(--architecture-card-shadow);
+}
+
+.tradeoff-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tradeoff-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+.tradeoff-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.95;
+}
+
+/* =====================================
+   System Design Page - Checklist
+   ===================================== */
+.section-design-checklist {
+    position: relative;
+}
+
+.design-checklist-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+}
+
+.design-checklist-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.95;
+}
+
+/* =====================================
+   System Design Page - CTA
+   ===================================== */
+.section-system-design-cta {
+    position: relative;
+}
+
+.system-design-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-cta-bg);
+    box-shadow: var(--architecture-cta-shadow);
+}
+
+.system-design-cta-title {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.system-design-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Responsive Adjustments - System Design
+   ===================================== */
+@media (max-width: 991.98px) {
+    .system-design-cta-title {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .design-principle-card,
+    .system-design-flow-card,
+    .system-design-flow-right,
+    .design-dimension-card,
+    .pos-design-case-card,
+    .pos-case-block,
+    .tradeoff-card,
+    .design-checklist-card,
+    .system-design-cta-box {
+        padding: 1.35rem;
+    }
+
+    .design-flow-step {
+        gap: 0.85rem;
+    }
+
+    .design-flow-step-index {
+        width: 42px;
+        height: 42px;
+        font-size: 0.85rem;
+    }
+
+    .design-flow-connector {
+        margin-left: 20px;
+    }
+}
+
+
+/*##############################################################
+
+
+/* =====================================
+   Blog Page - Writing Overview
+   ===================================== */
+.section-writing-overview {
+    position: relative;
+}
+
+.writing-metric-card {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--github-stat-bg);
+    box-shadow: var(--github-stat-shadow);
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.writing-metric-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--github-stat-shadow-hover);
+}
+
+.writing-metric-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+}
+
+.writing-metric-number {
+    display: block;
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.writing-metric-label {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--muted-color);
+    font-size: 0.95rem;
+}
+
+/* =====================================
+   Blog Page - Featured Article
+   ===================================== */
+.section-featured-article {
+    position: relative;
+}
+
+.featured-article-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--featured-card-bg);
+    box-shadow: var(--featured-card-shadow);
+}
+
+.featured-article-title {
+    color: var(--heading-color);
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.featured-article-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+}
+
+.article-info-box {
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--project-info-bg);
+}
+
+.article-info-title {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+}
+
+.article-info-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+.article-highlight-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--flow-card-bg);
+    box-shadow: var(--flow-card-shadow);
+}
+
+.article-highlight-title {
+    color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.article-highlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.article-highlight-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    background: var(--flow-step-bg);
+}
+
+.article-highlight-label {
+    color: var(--muted-color);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.article-highlight-value {
+    color: var(--heading-color);
+    font-size: 0.94rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.writing-quote-box {
+    padding: 1.2rem;
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+    background: var(--project-info-bg);
+}
+
+.writing-quote-text {
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* =====================================
+   Blog Page - Articles Grid
+   ===================================== */
+.section-articles-grid {
+    position: relative;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--blog-card-bg);
+    box-shadow: var(--blog-card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--blog-card-shadow-hover);
+}
+
+.article-card-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.article-card-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+}
+
+.article-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-card-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background-color: var(--project-preview-tag-bg);
+    color: var(--accent-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* =====================================
+   Blog Page - Benefits
+   ===================================== */
+.section-writing-benefits {
+    position: relative;
+}
+
+.writing-benefits-card {
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--projects-cta-bg);
+    box-shadow: var(--projects-cta-shadow);
+}
+
+.writing-benefits-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.writing-benefits-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.95;
+}
+
+.writing-benefits-text {
+    color: var(--muted-color);
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Blog Page - Writing Process
+   ===================================== */
+.section-writing-process {
+    position: relative;
+}
+
+.writing-process-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+}
+
+.writing-process-step {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--architecture-inner-box-bg);
+}
+
+.writing-process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background-color: var(--system-flow-index-bg);
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 800;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.writing-process-title {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.writing-process-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Blog Page - CTA
+   ===================================== */
+.section-blog-page-cta {
+    position: relative;
+}
+
+.blog-page-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--blog-cta-bg);
+    box-shadow: var(--blog-cta-shadow);
+}
+
+.blog-page-cta-title {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.blog-page-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Responsive Adjustments - Blog Page
+   ===================================== */
+@media (max-width: 991.98px) {
+    .featured-article-title {
+        font-size: 1.65rem;
+    }
+
+    .blog-page-cta-title {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .writing-metric-card,
+    .featured-article-card,
+    .article-highlight-card,
+    .article-card,
+    .writing-benefits-card,
+    .writing-process-card,
+    .writing-process-step,
+    .blog-page-cta-box {
+        padding: 1.35rem;
+    }
+
+    .article-highlight-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-highlight-value {
+        text-align: left;
+    }
+
+    .article-card-title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/*##############################################
+
+
+
+/* =====================================
+   Contact Page - Contact Methods
+   ===================================== */
+.section-contact-methods {
+    position: relative;
+}
+
+.contact-method-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-method-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-soft-border);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.contact-method-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: var(--icon-box-bg);
+    color: var(--accent-color);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.contact-method-title {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.contact-method-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.contact-method-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.contact-method-link:hover {
+    color: var(--accent-hover);
+}
+
+/* =====================================
+   Contact Page - Form
+   ===================================== */
+.section-contact-form {
+    position: relative;
+}
+
+.contact-form-card,
+.contact-sidebar-card {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    background: var(--featured-card-bg);
+    box-shadow: var(--featured-card-shadow);
+}
+
+.contact-form-header {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-title {
+    color: var(--heading-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.contact-form-subtitle {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+.custom-form-label {
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.custom-form-control {
+    min-height: 54px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    background-color: var(--project-info-bg);
+    color: var(--text-color);
+    padding: 0.9rem 1rem;
+    box-shadow: none;
+}
+
+.custom-form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(2, 132, 199, 0.15);
+    background-color: var(--project-info-bg);
+    color: var(--text-color);
+}
+
+.custom-form-control::placeholder {
+    color: var(--muted-color);
+    opacity: 0.8;
+}
+
+.custom-textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-sidebar-title {
+    color: var(--heading-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-sidebar-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--muted-color);
+    line-height: 1.95;
+}
+
+.contact-availability-box,
+.contact-response-box {
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--project-info-bg);
+}
+
+.contact-availability-title,
+.contact-response-title {
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+}
+
+.contact-availability-text,
+.contact-response-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Contact Page - Quick CTA
+   ===================================== */
+.section-quick-contact-cta {
+    position: relative;
+}
+
+.quick-contact-cta-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--architecture-cta-bg);
+    box-shadow: var(--architecture-cta-shadow);
+}
+
+.quick-contact-cta-title {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.quick-contact-cta-text {
+    color: var(--muted-color);
+    line-height: 1.8;
+}
+
+/* =====================================
+   Contact Page - FAQ Cards
+   ===================================== */
+.section-contact-faq {
+    position: relative;
+}
+
+.contact-faq-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+}
+
+.contact-faq-title {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+}
+
+.contact-faq-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   Responsive Adjustments - Contact Page
+   ===================================== */
+@media (max-width: 991.98px) {
+    .contact-form-title {
+        font-size: 1.55rem;
+    }
+
+    .quick-contact-cta-title {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-method-card,
+    .contact-form-card,
+    .contact-sidebar-card,
+    .contact-availability-box,
+    .contact-response-box,
+    .quick-contact-cta-box,
+    .contact-faq-card {
+        padding: 1.35rem;
+    }
+
+    .custom-form-control {
+        min-height: 50px;
+    }
+}
+
+
+/*##############################################
+
+/* =====================================
+   Professional Footer Upgrade
+   ===================================== */
+.site-footer {
+    margin-top: 0;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--footer-bg);
+    color: var(--muted-color);
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.footer-main {
+    padding-bottom: 2rem;
+}
+
+.footer-brand {
+    display: inline-block;
+    color: var(--heading-color);
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-brand:hover {
+    color: var(--accent-color);
+}
+
+.footer-brand-text {
+    color: var(--muted-color);
+    line-height: 1.85;
+    max-width: 380px;
+    margin-bottom: 1.25rem;
+}
+
+.footer-social-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-social-link {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--heading-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.25s ease;
+}
+
+.footer-social-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-soft-border);
+    transform: translateY(-3px);
+}
+
+.footer-block-title {
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-links-list,
+.footer-focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li + li,
+.footer-focus-list li + li {
+    margin-top: 0.75rem;
+}
+
+.footer-links-list a {
+    color: var(--muted-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--accent-color);
+}
+
+.footer-focus-list li {
+    color: var(--muted-color);
+    line-height: 1.75;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.footer-focus-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+.footer-bottom {
+    padding: 1.25rem 0 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-copyright,
+.footer-bottom-text {
+    color: var(--muted-color);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* =====================================
+   Responsive Adjustments - Footer
+   ===================================== */
+@media (max-width: 991.98px) {
+    .site-footer {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer-brand-text {
+        max-width: 100%;
+    }
+
+    .footer-social-link {
+        width: 42px;
+        height: 42px;
+    }
+
+    .footer-bottom {
+        padding: 1.1rem 0 1.6rem;
+    }
+}

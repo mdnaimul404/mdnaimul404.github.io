@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!--
+        =========================================================
+        Portfolio: Md. Naimul Islam
+        Page     : System Design
+        Stack    : HTML + Bootstrap 5 + Vanilla JavaScript
+        Purpose  : Showcase backend system design thinking
+        =========================================================
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="System Design page of Md. Naimul Islam. Backend scalability, API design, data flow, architecture thinking, and maintainable system planning.">
+
+    <title>System Design | Md. Naimul Islam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+    <!-- ======================================
+         NAVBAR
+         ====================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo" href="index.html">NAIMUL</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="architecture.html">Architecture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="system-design.html">System Design</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Theme Selector -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <div class="theme-switcher d-flex align-items-center gap-2">
+                            <button class="btn btn-sm theme-btn" data-theme-value="dark" title="Dark mode"
+                                aria-label="Switch to dark mode">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="light" title="Light mode"
+                                aria-label="Switch to light mode">
+                                <i class="bi bi-sun"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="system" title="System theme"
+                                aria-label="Use system theme">
+                                <i class="bi bi-display"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================
+         PAGE HERO
+         ====================================== -->
+    <section class="inner-page-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">System Design Thinking</span>
+
+                    <h1 class="inner-page-title">
+                        I think about backend systems in terms of flow, scale, reliability, and long-term maintainability.
+                    </h1>
+
+                    <p class="inner-page-description mt-4">
+                        Good system design is not just about drawing components. It is about understanding
+                        how requests move through a system, where bottlenecks appear, how data is modeled,
+                        and how architecture decisions support product growth over time.
+                    </p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="#design-principles" class="btn btn-accent btn-lg">Explore Design Principles</a>
+                        <a href="architecture.html" class="btn btn-outline-theme btn-lg">Architecture Page</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="page-summary-card">
+                        <h3 class="page-summary-title">System Design Focus</h3>
+
+                        <ul class="page-summary-list">
+                            <li>Request lifecycle thinking</li>
+                            <li>Scalable backend planning</li>
+                            <li>Database-aware design</li>
+                            <li>Performance and maintainability</li>
+                            <li>Practical API system structure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         DESIGN PRINCIPLES
+         ====================================== -->
+    <section id="design-principles" class="section-spacing section-design-principles">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Design Principles</span>
+                    <h2 class="section-title mb-3">What I pay attention to when designing backend systems</h2>
+                    <p class="section-description">
+                        My system design mindset focuses on building systems that are understandable today
+                        and adaptable tomorrow.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3">
+                    <div class="design-principle-card h-100">
+                        <div class="design-principle-icon">
+                            <i class="bi bi-arrow-left-right"></i>
+                        </div>
+                        <h3 class="design-principle-title">Request Flow Clarity</h3>
+                        <p class="design-principle-text">
+                            Every request should move through the system in a predictable and understandable way.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="design-principle-card h-100">
+                        <div class="design-principle-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h3 class="design-principle-title">Performance Awareness</h3>
+                        <p class="design-principle-text">
+                            Good design considers query cost, response time, and future traffic growth early.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="design-principle-card h-100">
+                        <div class="design-principle-icon">
+                            <i class="bi bi-diagram-2"></i>
+                        </div>
+                        <h3 class="design-principle-title">Component Separation</h3>
+                        <p class="design-principle-text">
+                            Systems are easier to evolve when responsibilities are divided across clear components.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="design-principle-card h-100">
+                        <div class="design-principle-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="design-principle-title">Reliability Thinking</h3>
+                        <p class="design-principle-text">
+                            Stable systems are designed to handle invalid input, load changes, and failure points gracefully.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         SYSTEM FLOW SECTION
+         ====================================== -->
+    <section class="section-spacing section-system-design-flow">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Example System Flow</span>
+                    <h2 class="section-title mb-3">How I think about a backend request path</h2>
+                    <p class="section-description">
+                        This example shows a simplified view of how I break down backend system flow.
+                    </p>
+                </div>
+            </div>
+
+            <div class="system-design-flow-card">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="system-design-flow-left h-100">
+                            <div class="design-flow-step">
+                                <div class="design-flow-step-index">01</div>
+                                <div class="design-flow-step-content">
+                                    <h4>Client Request</h4>
+                                    <p>
+                                        A user action from web or mobile triggers an API request to the backend.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="design-flow-connector"></div>
+
+                            <div class="design-flow-step">
+                                <div class="design-flow-step-index">02</div>
+                                <div class="design-flow-step-content">
+                                    <h4>API Gateway / Route Entry</h4>
+                                    <p>
+                                        The request enters the application through an endpoint that validates and routes it correctly.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="design-flow-connector"></div>
+
+                            <div class="design-flow-step">
+                                <div class="design-flow-step-index">03</div>
+                                <div class="design-flow-step-content">
+                                    <h4>Business Logic Layer</h4>
+                                    <p>
+                                        The service layer applies rules, permissions, workflow decisions, and coordination logic.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="design-flow-connector"></div>
+
+                            <div class="design-flow-step">
+                                <div class="design-flow-step-index">04</div>
+                                <div class="design-flow-step-content">
+                                    <h4>Persistence Layer</h4>
+                                    <p>
+                                        Repositories or data access components retrieve, update, or persist data safely.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="design-flow-connector"></div>
+
+                            <div class="design-flow-step">
+                                <div class="design-flow-step-index">05</div>
+                                <div class="design-flow-step-content">
+                                    <h4>Database Response</h4>
+                                    <p>
+                                        Data is returned upward through the system and transformed into a clean API response.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="system-design-flow-right h-100">
+                            <h3 class="system-design-side-title">Why this matters</h3>
+
+                            <div class="system-design-side-point">
+                                <h4>Supports debugging</h4>
+                                <p>
+                                    Clear request flow makes it easier to identify where failures or inefficiencies happen.
+                                </p>
+                            </div>
+
+                            <div class="system-design-side-point">
+                                <h4>Improves scaling decisions</h4>
+                                <p>
+                                    Once request flow is clear, it becomes easier to decide what should be cached, optimized, or split.
+                                </p>
+                            </div>
+
+                            <div class="system-design-side-point">
+                                <h4>Helps team collaboration</h4>
+                                <p>
+                                    Engineers can work faster when they understand the path of responsibility across the system.
+                                </p>
+                            </div>
+
+                            <div class="system-design-side-point">
+                                <h4>Protects maintainability</h4>
+                                <p>
+                                    A well-structured path prevents business logic from being spread across too many places.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         DESIGN DIMENSIONS
+         ====================================== -->
+    <section class="section-spacing section-design-dimensions">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Design Dimensions</span>
+                    <h2 class="section-title mb-3">The engineering dimensions I consider in system design</h2>
+                    <p class="section-description">
+                        Even simple systems become stronger when the right design questions are asked early.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="design-dimension-card h-100">
+                        <h3 class="design-dimension-title">Scalability</h3>
+                        <p class="design-dimension-text">
+                            Can the system handle increasing users, requests, or data volume without collapsing in complexity?
+                        </p>
+                        <ul class="design-dimension-list">
+                            <li>Horizontal growth considerations</li>
+                            <li>Traffic and query pressure awareness</li>
+                            <li>Service boundaries that support extension</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="design-dimension-card h-100">
+                        <h3 class="design-dimension-title">Performance</h3>
+                        <p class="design-dimension-text">
+                            Is the system efficient in query behavior, response generation, and request handling?
+                        </p>
+                        <ul class="design-dimension-list">
+                            <li>Efficient database access</li>
+                            <li>Reduced unnecessary work in request path</li>
+                            <li>Awareness of response bottlenecks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="design-dimension-card h-100">
+                        <h3 class="design-dimension-title">Reliability</h3>
+                        <p class="design-dimension-text">
+                            Can the system behave predictably when inputs are invalid, data is missing, or workloads shift?
+                        </p>
+                        <ul class="design-dimension-list">
+                            <li>Validation and safe failure paths</li>
+                            <li>Controlled business logic handling</li>
+                            <li>Stable flow under edge cases</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="design-dimension-card h-100">
+                        <h3 class="design-dimension-title">Maintainability</h3>
+                        <p class="design-dimension-text">
+                            Can another engineer extend the system without first untangling a confusing structure?
+                        </p>
+                        <ul class="design-dimension-list">
+                            <li>Readable module organization</li>
+                            <li>Clear ownership of responsibilities</li>
+                            <li>Safer long-term refactoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         POS DESIGN CASE
+         ====================================== -->
+    <section class="section-spacing section-pos-design-case">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Practical Design Case</span>
+                    <h2 class="section-title mb-3">How I think about a grocery POS backend system</h2>
+                    <p class="section-description">
+                        My project thinking is grounded in practical workflows, not only theoretical diagrams.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pos-design-case-card">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="pos-case-block h-100">
+                            <h3 class="pos-case-title">Key system concerns</h3>
+                            <ul class="pos-case-list">
+                                <li>Inventory must stay accurate after sales updates</li>
+                                <li>Sales workflow should remain consistent and traceable</li>
+                                <li>Authentication and permissions must protect operations</li>
+                                <li>Database structure must support products, orders, and reports</li>
+                                <li>Backend modules should remain readable as the product expands</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="pos-case-block h-100">
+                            <h3 class="pos-case-title">Design approach</h3>
+                            <ul class="pos-case-list">
+                                <li>Separate inventory, auth, and sales concerns into logical modules</li>
+                                <li>Keep business rules in services instead of route handlers</li>
+                                <li>Use repositories to isolate persistence logic</li>
+                                <li>Structure APIs for predictable request and response patterns</li>
+                                <li>Design for maintainability before adding complexity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         TRADE-OFF THINKING
+         ====================================== -->
+    <section class="section-spacing section-tradeoff-thinking">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="tradeoff-card h-100">
+                        <h3 class="tradeoff-title">System design is about trade-offs</h3>
+                        <p class="tradeoff-text">
+                            I understand that good engineering decisions usually involve balancing simplicity,
+                            speed, maintainability, and future scalability.
+                        </p>
+
+                        <ul class="tradeoff-list">
+                            <li>A simple design is often better than premature complexity</li>
+                            <li>Readable systems are easier to improve later</li>
+                            <li>Scalability should be considered, but not overengineered too early</li>
+                            <li>Database and API design should support real use cases, not just theory</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="tradeoff-card h-100">
+                        <h3 class="tradeoff-title">What recruiters should see on this page</h3>
+                        <p class="tradeoff-text">
+                            This page shows that I think beyond CRUD endpoints. I care about request flow,
+                            maintainable structure, backend scaling, and the practical design choices that
+                            make systems stronger over time.
+                        </p>
+
+                        <div class="mt-4 d-flex flex-wrap gap-3">
+                            <a href="projects.html" class="btn btn-accent">Project Examples</a>
+                            <a href="contact.html" class="btn btn-outline-theme">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         DESIGN CHECKLIST
+         ====================================== -->
+    <section class="section-spacing section-design-checklist">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Checklist</span>
+                    <h2 class="section-title mb-3">Questions I ask when thinking about backend design</h2>
+                    <p class="section-description">
+                        These questions help keep architecture grounded in engineering reality.
+                    </p>
+                </div>
+            </div>
+
+            <div class="design-checklist-card">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <ul class="design-checklist-list">
+                            <li>Where does the request enter and how does it move through the system?</li>
+                            <li>Which layer owns the business rules?</li>
+                            <li>Will the current data access pattern remain efficient as usage grows?</li>
+                            <li>Is the API structure consistent enough for future modules?</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="design-checklist-list">
+                            <li>Can another developer understand this design quickly?</li>
+                            <li>Which parts of the system are most likely to become bottlenecks?</li>
+                            <li>What should remain simple now and what may need scaling later?</li>
+                            <li>Does the structure support maintainability as features expand?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         CTA SECTION
+         ====================================== -->
+    <section class="section-spacing section-system-design-cta">
+        <div class="container">
+            <div class="system-design-cta-box">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="system-design-cta-title">
+                            Interested in a backend engineer who thinks in systems, not only endpoints?
+                        </h2>
+                        <p class="system-design-cta-text mb-0">
+                            I am especially interested in backend roles where maintainability, architecture quality,
+                            and thoughtful system design are valued.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-accent btn-lg">Let’s Connect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     FOOTER
+     ====================================== -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand-block">
+
+                        <a href="index.html" class="footer-brand">Md. Naimul Islam</a>
+
+                        <p class="footer-brand-text">
+                            I am a Backend Developer focused on building scalable and maintainable systems using Python, 
+                            FastAPI, PostgreSQL, and clean architecture principles.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/mdnaimul404"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/naimul404/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:md.naimul16@gmail.com"
+                               class="footer-social-link"
+                               aria-label="Email">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <!-- Resume -->
+                            <a href="resume/md_naimul_islam_resume.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="Resume">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">Navigation</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="system-design.html">System Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">More</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="resume/md_naimul_islam_resume.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   Resume
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/mdnaimul404"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/naimul404/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="footer-contact-block">
+                        <h3 class="footer-block-title">Professional Focus</h3>
+
+                        <ul class="footer-focus-list">
+                            <li>Backend Engineering</li>
+                            <li>FastAPI API Development</li>
+                            <li>PostgreSQL Database Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maintainable Backend Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">
+                        © 2026 Md. Naimul Islam. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-bottom-text mb-0">
+                        Built with HTML, CSS, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

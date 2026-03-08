@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!--
+        =========================================================
+        Portfolio: Md. Naimul Islam
+        Page     : Contact
+        Stack    : HTML + Bootstrap 5 + Vanilla JavaScript
+        Purpose  : Professional contact page for recruiters and collaborators
+        =========================================================
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Md. Naimul Islam, Backend Developer specializing in Python, FastAPI, PostgreSQL, and clean architecture.">
+
+    <title>Contact | Md. Naimul Islam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+    <!-- ======================================
+         NAVBAR
+         ====================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo" href="index.html">NAIMUL</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="architecture.html">Architecture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="system-design.html">System Design</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Theme Selector -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <div class="theme-switcher d-flex align-items-center gap-2">
+                            <button class="btn btn-sm theme-btn" data-theme-value="dark" title="Dark mode"
+                                aria-label="Switch to dark mode">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="light" title="Light mode"
+                                aria-label="Switch to light mode">
+                                <i class="bi bi-sun"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="system" title="System theme"
+                                aria-label="Use system theme">
+                                <i class="bi bi-display"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================
+         PAGE HERO
+         ====================================== -->
+    <section class="inner-page-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Contact</span>
+
+                    <h1 class="inner-page-title">
+                        Let’s connect about backend engineering opportunities, projects, and professional collaboration.
+                    </h1>
+
+                    <p class="inner-page-description mt-4">
+                        I am a Backend Developer focused on Python, FastAPI, PostgreSQL, and clean architecture.
+                        If you are hiring for backend roles, reviewing engineering portfolios,
+                        or looking for someone who values maintainable backend systems,
+                        I would be glad to connect.
+                    </p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="#contact-methods" class="btn btn-accent btn-lg">View Contact Options</a>
+                        <a href="resume/Md.Naimul_Islam.pdf" class="btn btn-outline-theme btn-lg"
+                            target="_blank" rel="noopener noreferrer">
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="page-summary-card">
+                        <h3 class="page-summary-title">Contact Focus</h3>
+
+                        <ul class="page-summary-list">
+                            <li>Backend engineering roles</li>
+                            <li>Technical collaboration</li>
+                            <li>Recruiter outreach</li>
+                            <li>Project discussions</li>
+                            <li>Professional networking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     CONTACT METHODS
+     ====================================== -->
+    <section id="contact-methods" class="section-spacing section-contact-methods">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <span class="section-badge mb-3 d-inline-block">Reach Out</span>
+                <h2 class="section-title mb-3">Professional contact options</h2>
+                <p class="section-description">
+                    Choose the channel that works best for you. This page is designed to make communication simple and clear.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- EMAIL -->
+            <div class="col-md-6 col-xl-3">
+                <div class="contact-method-card h-100">
+                    <div class="contact-method-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+
+                    <h3 class="contact-method-title">Email</h3>
+
+                    <p class="contact-method-text">
+                        Best for recruiter outreach, interview communication, and professional discussions.
+                    </p>
+
+                    <a href="mailto:md.naimul16@gmail.com" class="contact-method-link">
+                        md.naimul16@gmail.com
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- GITHUB -->
+            <div class="col-md-6 col-xl-3">
+                <div class="contact-method-card h-100">
+                    <div class="contact-method-icon">
+                        <i class="bi bi-github"></i>
+                    </div>
+
+                    <h3 class="contact-method-title">GitHub</h3>
+
+                    <p class="contact-method-text">
+                        Review my repositories, backend project structure, and engineering work publicly.
+                    </p>
+
+                    <a href="https://github.com/mdnaimul404"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-method-link">
+                        github.com/mdnaimul404
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- LINKEDIN -->
+            <div class="col-md-6 col-xl-3">
+                <div class="contact-method-card h-100">
+                    <div class="contact-method-icon">
+                        <i class="bi bi-linkedin"></i>
+                    </div>
+
+                    <h3 class="contact-method-title">LinkedIn</h3>
+
+                    <p class="contact-method-text">
+                        Connect with me professionally, view my career background, and follow my backend engineering journey.
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/naimul404/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-method-link">
+                        linkedin.com/in/naimul404
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- RESUME -->
+            <div class="col-md-6 col-xl-3">
+                <div class="contact-method-card h-100">
+                    <div class="contact-method-icon">
+                        <i class="bi bi-file-earmark-person"></i>
+                    </div>
+
+                    <h3 class="contact-method-title">Resume</h3>
+
+                    <p class="contact-method-text">
+                        View my resume for a quick summary of skills, experience, and technical focus.
+                    </p>
+
+                    <a href="resume/Md.Naimul_Islam.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-method-link">
+                        Open Resume PDF
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ======================================
+     CONTACT FORM SECTION
+     ====================================== -->
+    <section class="section-spacing section-contact-form">
+    <div class="container">
+        <div class="row g-4 align-items-stretch">
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+                <div class="contact-form-card h-100">
+
+                    <div class="contact-form-header">
+                        <h2 class="contact-form-title">Send a message</h2>
+
+                        <p class="contact-form-subtitle">
+                            If you would like to discuss backend engineering opportunities,
+                            collaborations, or technical topics, feel free to send me a message.
+                        </p>
+                    </div>
+
+                    <!-- Formspree Form -->
+                    <form
+                        class="contact-form-content"
+                        action="https://formspree.io/f/xlgpdyve"
+                        method="POST"
+                    >
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label custom-form-label">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="form-control custom-form-control"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <label for="emailAddress" class="form-label custom-form-label">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="emailAddress"
+                                    name="email"
+                                    class="form-control custom-form-control"
+                                    placeholder="Enter your email address"
+                                    required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                >
+
+                                <div class="form-text">
+                                    Please enter a valid email address (example: name@example.com).
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <label class="form-label custom-form-label">
+                                    Subject
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    class="form-control custom-form-control"
+                                    placeholder="What would you like to discuss?"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="col-12">
+                                <label class="form-label custom-form-label">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    name="message"
+                                    rows="6"
+                                    class="form-control custom-form-control custom-textarea"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <!-- Hidden settings -->
+                            <input type="hidden" name="_subject" value="New Portfolio Message">
+                            <input type="hidden" name="_captcha" value="false">
+
+
+                            <div class="col-12">
+                                <button
+                                    type="submit"
+                                    class="btn btn-accent btn-lg"
+                                >
+                                    Send Message
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-5">
+                <div class="contact-sidebar-card h-100">
+
+                    <h3 class="contact-sidebar-title">
+                        What I am open to
+                    </h3>
+
+                    <ul class="contact-sidebar-list">
+                        <li>Backend Developer opportunities</li>
+                        <li>Python and FastAPI roles</li>
+                        <li>API and architecture-focused work</li>
+                        <li>Technical discussions and networking</li>
+                        <li>Projects involving clean backend design</li>
+                    </ul>
+
+
+                    <div class="contact-availability-box mt-4">
+                        <h4 class="contact-availability-title">
+                            Current focus
+                        </h4>
+
+                        <p class="contact-availability-text mb-0">
+                            I am particularly interested in backend roles where system design,
+                            maintainability, and clean architecture are treated as core engineering priorities.
+                        </p>
+                    </div>
+
+
+                    <div class="contact-response-box mt-4">
+                        <h4 class="contact-response-title">
+                            Best way to reach me
+                        </h4>
+
+                        <p class="contact-response-text mb-0">
+                            Email is the best channel for recruiter outreach, backend engineering
+                            opportunities, and professional collaboration.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ======================================
+         QUICK CONTACT CTA
+         ====================================== -->
+    <section class="section-spacing section-quick-contact-cta">
+        <div class="container">
+            <div class="quick-contact-cta-box">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="quick-contact-cta-title">
+                            Looking for a backend engineer who values clean architecture and maintainable systems?
+                        </h2>
+                        <p class="quick-contact-cta-text mb-0">
+                            I would be glad to discuss backend engineering roles, technical collaboration,
+                            and opportunities where structured software design is important.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="mailto:md.naimul16@gmail.com" class="btn btn-accent btn-lg">
+                            Email Me Directly
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         FAQ STYLE SECTION
+         ====================================== -->
+    <section class="section-spacing section-contact-faq">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Contact Notes</span>
+                    <h2 class="section-title mb-3">Helpful information before reaching out</h2>
+                    <p class="section-description">
+                        A few quick points that make this contact page more useful for recruiters and collaborators.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-faq-card h-100">
+                        <h3 class="contact-faq-title">Role Interest</h3>
+                        <p class="contact-faq-text">
+                            I am focused on backend engineering roles involving Python, FastAPI, PostgreSQL,
+                            and maintainable API architecture.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="contact-faq-card h-100">
+                        <h3 class="contact-faq-title">Portfolio Strength</h3>
+                        <p class="contact-faq-text">
+                            My portfolio is designed to communicate backend engineering depth,
+                            architecture thinking, project structure, and technical writing ability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="contact-faq-card h-100">
+                        <h3 class="contact-faq-title">Preferred Contact</h3>
+                        <p class="contact-faq-text">
+                            Email is the most professional and reliable way to discuss opportunities,
+                            interviews, and technical conversations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     FOOTER
+     ====================================== -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand-block">
+
+                        <a href="index.html" class="footer-brand">Md. Naimul Islam</a>
+
+                        <p class="footer-brand-text">
+                            I am a Backend Developer focused on building scalable and maintainable systems using Python, 
+                            FastAPI, PostgreSQL, and clean architecture principles.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/mdnaimul404"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/naimul404/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:md.naimul16@gmail.com"
+                               class="footer-social-link"
+                               aria-label="Email">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <!-- Resume -->
+                            <a href="resume/Md.Naimul_Islam.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="Resume">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">Navigation</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="system-design.html">System Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">More</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="resume/Md.Naimul_Islam.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   Resume
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/mdnaimul404"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/naimul404/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="footer-contact-block">
+                        <h3 class="footer-block-title">Professional Focus</h3>
+
+                        <ul class="footer-focus-list">
+                            <li>Backend Engineering</li>
+                            <li>FastAPI API Development</li>
+                            <li>PostgreSQL Database Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maintainable Backend Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">
+                        © 2026 Md. Naimul Islam. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-bottom-text mb-0">
+                        Built with HTML, CSS, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

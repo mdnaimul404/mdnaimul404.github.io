@@ -1,0 +1,102 @@
+/*
+=========================================================
+Dark Theme
+=========================================================
+*/
+
+:root[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --heading-color: #f8fafc;
+    --muted-color: #94a3b8;
+
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --accent-contrast: #001018;
+
+    --border-color: rgba(148, 163, 184, 0.18);
+    --border-strong: rgba(226, 232, 240, 0.28);
+    --accent-soft-border: rgba(56, 189, 248, 0.28);
+
+    --navbar-bg: rgba(15, 23, 42, 0.82);
+    --footer-bg: rgba(15, 23, 42, 0.95);
+
+    --nav-link-color: #cbd5e1;
+
+    --badge-bg: rgba(56, 189, 248, 0.08);
+
+    --theme-switcher-bg: rgba(15, 23, 42, 0.65);
+    --theme-btn-hover-bg: rgba(148, 163, 184, 0.12);
+    --active-theme-btn-bg: #38bdf8;
+    --active-theme-btn-text: #001018;
+
+    --outline-hover-bg: rgba(148, 163, 184, 0.08);
+
+    --panel-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.98));
+    --panel-header-bg: rgba(15, 23, 42, 0.85);
+    --panel-shadow: 0 20px 50px rgba(2, 6, 23, 0.35);
+    --code-text-color: #cbd5e1;
+
+    --card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.96));
+    --card-shadow: 0 16px 36px rgba(2, 6, 23, 0.22);
+    --card-shadow-hover: 0 24px 50px rgba(2, 6, 23, 0.30);
+    --icon-box-bg: rgba(56, 189, 248, 0.08);
+    --progress-track-bg: rgba(148, 163, 184, 0.14);
+
+    --summary-box-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.88));
+    --summary-box-shadow: 0 16px 36px rgba(2, 6, 23, 0.18);
+
+    --featured-card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.96));
+    --featured-card-shadow: 0 22px 48px rgba(2, 6, 23, 0.28);
+    --project-badge-bg: rgba(56, 189, 248, 0.08);
+    --project-info-bg: rgba(15, 23, 42, 0.62);
+    --stat-box-bg: rgba(15, 23, 42, 0.66);
+
+    --flow-card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(2, 6, 23, 0.94));
+    --flow-card-shadow: 0 20px 40px rgba(2, 6, 23, 0.22);
+    --flow-header-bg: rgba(15, 23, 42, 0.82);
+    --flow-step-bg: rgba(15, 23, 42, 0.72);
+
+    --project-preview-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.95));
+    --project-preview-shadow: 0 16px 38px rgba(2, 6, 23, 0.20);
+    --project-preview-shadow-hover: 0 24px 48px rgba(2, 6, 23, 0.28);
+    --project-preview-tag-bg: rgba(56, 189, 248, 0.08);
+
+    --projects-cta-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.94));
+    --projects-cta-shadow: 0 16px 36px rgba(2, 6, 23, 0.18);
+
+    --architecture-card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.95));
+    --architecture-card-shadow: 0 18px 42px rgba(2, 6, 23, 0.22);
+    --architecture-header-bg: rgba(15, 23, 42, 0.82);
+    --architecture-inner-box-bg: rgba(15, 23, 42, 0.64);
+    --system-flow-index-bg: rgba(56, 189, 248, 0.08);
+
+    --architecture-cta-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.94));
+    --architecture-cta-shadow: 0 16px 36px rgba(2, 6, 23, 0.18);
+
+    --github-stat-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.95));
+    --github-stat-shadow: 0 16px 36px rgba(2, 6, 23, 0.18);
+    --github-stat-shadow-hover: 0 24px 46px rgba(2, 6, 23, 0.26);
+
+    --github-card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.96));
+    --github-card-shadow: 0 18px 42px rgba(2, 6, 23, 0.20);
+    --github-repo-item-bg: rgba(15, 23, 42, 0.68);
+
+    --github-contribution-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.94));
+    --github-contribution-shadow: 0 16px 36px rgba(2, 6, 23, 0.18);
+
+    --blog-card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.95));
+    --blog-card-shadow: 0 16px 38px rgba(2, 6, 23, 0.20);
+    --blog-card-shadow-hover: 0 24px 48px rgba(2, 6, 23, 0.28);
+
+    --blog-cta-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.94));
+    --blog-cta-shadow: 0 16px 36px rgba(2, 6, 23, 0.18);
+
+    --timeline-card-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.95));
+    --timeline-card-shadow: 0 16px 38px rgba(2, 6, 23, 0.18);
+    --timeline-badge-bg: rgba(56, 189, 248, 0.08);
+    --timeline-dot-ring: rgba(56, 189, 248, 0.12);
+
+    --contact-cta-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.96));
+    --contact-cta-shadow: 0 20px 46px rgba(2, 6, 23, 0.22);
+}

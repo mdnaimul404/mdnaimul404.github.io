@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!--
+        =========================================================
+        Portfolio: Md. Naimul Islam
+        Page     : Architecture
+        Stack    : HTML + Bootstrap 5 + Vanilla JavaScript
+        Purpose  : Showcase backend architecture thinking
+        =========================================================
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Architecture page of Md. Naimul Islam. Clean Architecture, Route-Service-Repository-DB flow, backend maintainability, and scalable API thinking.">
+
+    <title>Architecture | Md. Naimul Islam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+    <!-- ======================================
+         NAVBAR
+         ====================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo" href="index.html">NAIMUL</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="architecture.html">Architecture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="system-design.html">System Design</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <!-- Theme Selector -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <div class="theme-switcher d-flex align-items-center gap-2">
+                            <button class="btn btn-sm theme-btn" data-theme-value="dark" title="Dark mode"
+                                aria-label="Switch to dark mode">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="light" title="Light mode"
+                                aria-label="Switch to light mode">
+                                <i class="bi bi-sun"></i>
+                            </button>
+
+                            <button class="btn btn-sm theme-btn" data-theme-value="system" title="System theme"
+                                aria-label="Use system theme">
+                                <i class="bi bi-display"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================
+         PAGE HERO
+         ====================================== -->
+    <section class="inner-page-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Architecture Thinking</span>
+
+                    <h1 class="inner-page-title">
+                        I build backend systems with clean boundaries, readable logic, and long-term maintainability in mind.
+                    </h1>
+
+                    <p class="inner-page-description mt-4">
+                        My architecture approach centers on separating responsibilities clearly:
+                        route handlers manage transport, services contain business logic,
+                        repositories handle data access, and the database remains an implementation detail
+                        behind clean boundaries.
+                    </p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="#architecture-flow" class="btn btn-accent btn-lg">Explore Architecture Flow</a>
+                        <a href="projects.html" class="btn btn-outline-theme btn-lg">See Projects</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="page-summary-card">
+                        <h3 class="page-summary-title">Core Architecture Focus</h3>
+
+                        <ul class="page-summary-list">
+                            <li>Separation of responsibilities</li>
+                            <li>Service-oriented business logic</li>
+                            <li>Repository-based data access</li>
+                            <li>Readable backend structure</li>
+                            <li>Scalable project organization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         ARCHITECTURE PRINCIPLES
+         ====================================== -->
+    <section class="section-spacing section-architecture-principles-page">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Core Principles</span>
+                    <h2 class="section-title mb-3">The principles I follow when designing backend systems</h2>
+                    <p class="section-description">
+                        Good backend architecture is not just about layers. It is about making the system
+                        easier to understand, easier to change, and safer to scale.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3">
+                    <div class="architecture-principle-page-card h-100">
+                        <div class="architecture-principle-page-icon">
+                            <i class="bi bi-layers"></i>
+                        </div>
+                        <h3 class="architecture-principle-page-title">Clear Layer Separation</h3>
+                        <p class="architecture-principle-page-text">
+                            Each layer should have one clear responsibility so the codebase remains easy to navigate and extend.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="architecture-principle-page-card h-100">
+                        <div class="architecture-principle-page-icon">
+                            <i class="bi bi-braces"></i>
+                        </div>
+                        <h3 class="architecture-principle-page-title">Readable Business Logic</h3>
+                        <p class="architecture-principle-page-text">
+                            Business rules belong in services, not scattered inside routes or mixed with database code.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="architecture-principle-page-card h-100">
+                        <div class="architecture-principle-page-icon">
+                            <i class="bi bi-database-gear"></i>
+                        </div>
+                        <h3 class="architecture-principle-page-title">Repository Isolation</h3>
+                        <p class="architecture-principle-page-text">
+                            Data access should be isolated so persistence concerns do not leak into the service layer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="architecture-principle-page-card h-100">
+                        <div class="architecture-principle-page-icon">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h3 class="architecture-principle-page-title">Maintainable Growth</h3>
+                        <p class="architecture-principle-page-text">
+                            New modules and features should fit into the existing structure without creating chaos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         ARCHITECTURE FLOW
+         ====================================== -->
+    <section id="architecture-flow" class="section-spacing section-architecture-flow-page">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Architecture Flow</span>
+                    <h2 class="section-title mb-3">My preferred backend request lifecycle</h2>
+                    <p class="section-description">
+                        I use a layered backend structure where each part of the request path has a clear job.
+                    </p>
+                </div>
+            </div>
+
+            <div class="architecture-flow-page-card">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="architecture-flow-page-left h-100">
+                            <div class="flow-page-step">
+                                <div class="flow-page-step-index">01</div>
+                                <div class="flow-page-step-content">
+                                    <h4>Client Request</h4>
+                                    <p>
+                                        A user action or frontend request reaches the backend through an HTTP endpoint.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flow-page-connector"></div>
+
+                            <div class="flow-page-step">
+                                <div class="flow-page-step-index">02</div>
+                                <div class="flow-page-step-content">
+                                    <h4>Route Layer</h4>
+                                    <p>
+                                        Routes validate input, map requests, and forward the work to the correct service.
+                                        They should stay thin and avoid business decisions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flow-page-connector"></div>
+
+                            <div class="flow-page-step">
+                                <div class="flow-page-step-index">03</div>
+                                <div class="flow-page-step-content">
+                                    <h4>Service Layer</h4>
+                                    <p>
+                                        The service layer contains business logic, coordinates workflows,
+                                        applies rules, and keeps decision-making centralized.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flow-page-connector"></div>
+
+                            <div class="flow-page-step">
+                                <div class="flow-page-step-index">04</div>
+                                <div class="flow-page-step-content">
+                                    <h4>Repository Layer</h4>
+                                    <p>
+                                        Repositories interact with the database and isolate query logic
+                                        from the business layer.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flow-page-connector"></div>
+
+                            <div class="flow-page-step">
+                                <div class="flow-page-step-index">05</div>
+                                <div class="flow-page-step-content">
+                                    <h4>Database Layer</h4>
+                                    <p>
+                                        The database stores application data, while the upper layers remain protected
+                                        from direct persistence coupling.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="architecture-flow-page-right h-100">
+                            <h3 class="architecture-side-title">Why this structure works</h3>
+
+                            <div class="architecture-side-point">
+                                <h4>Improves readability</h4>
+                                <p>
+                                    Developers can quickly understand where request handling ends and business logic begins.
+                                </p>
+                            </div>
+
+                            <div class="architecture-side-point">
+                                <h4>Reduces coupling</h4>
+                                <p>
+                                    Business rules do not depend directly on route logic or low-level query code.
+                                </p>
+                            </div>
+
+                            <div class="architecture-side-point">
+                                <h4>Supports scaling</h4>
+                                <p>
+                                    As modules grow, the system can evolve without turning routes into large, hard-to-manage files.
+                                </p>
+                            </div>
+
+                            <div class="architecture-side-point">
+                                <h4>Helps maintenance</h4>
+                                <p>
+                                    Bugs, changes, and new features can be handled in the correct layer with less risk.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         LAYER RESPONSIBILITIES
+         ====================================== -->
+    <section class="section-spacing section-layer-responsibilities">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Layer Responsibilities</span>
+                    <h2 class="section-title mb-3">What each layer should and should not do</h2>
+                    <p class="section-description">
+                        A clean architecture becomes much stronger when responsibilities are enforced clearly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="responsibility-card h-100">
+                        <h3 class="responsibility-card-title">Route Layer</h3>
+
+                        <div class="responsibility-block">
+                            <h4>Should do</h4>
+                            <ul>
+                                <li>Receive request data</li>
+                                <li>Validate and parse input</li>
+                                <li>Call the appropriate service</li>
+                                <li>Return formatted HTTP responses</li>
+                            </ul>
+                        </div>
+
+                        <div class="responsibility-block">
+                            <h4>Should not do</h4>
+                            <ul>
+                                <li>Contain complex business rules</li>
+                                <li>Write raw database queries</li>
+                                <li>Mix transport concerns with business decisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="responsibility-card h-100">
+                        <h3 class="responsibility-card-title">Service Layer</h3>
+
+                        <div class="responsibility-block">
+                            <h4>Should do</h4>
+                            <ul>
+                                <li>Apply business rules</li>
+                                <li>Coordinate multiple repository actions</li>
+                                <li>Handle core workflow decisions</li>
+                                <li>Keep business logic centralized</li>
+                            </ul>
+                        </div>
+
+                        <div class="responsibility-block">
+                            <h4>Should not do</h4>
+                            <ul>
+                                <li>Be tightly coupled to HTTP request details</li>
+                                <li>Contain low-level persistence implementation details</li>
+                                <li>Return framework-heavy response objects unnecessarily</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="responsibility-card h-100">
+                        <h3 class="responsibility-card-title">Repository Layer</h3>
+
+                        <div class="responsibility-block">
+                            <h4>Should do</h4>
+                            <ul>
+                                <li>Handle data retrieval and persistence</li>
+                                <li>Encapsulate query logic</li>
+                                <li>Provide a clean interface to services</li>
+                                <li>Isolate database-specific operations</li>
+                            </ul>
+                        </div>
+
+                        <div class="responsibility-block">
+                            <h4>Should not do</h4>
+                            <ul>
+                                <li>Contain business workflow decisions</li>
+                                <li>Decide API response formats</li>
+                                <li>Take over responsibilities of service logic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="responsibility-card h-100">
+                        <h3 class="responsibility-card-title">Database Layer</h3>
+
+                        <div class="responsibility-block">
+                            <h4>Should do</h4>
+                            <ul>
+                                <li>Persist application data reliably</li>
+                                <li>Support structured querying and indexing</li>
+                                <li>Enforce relational consistency where needed</li>
+                            </ul>
+                        </div>
+
+                        <div class="responsibility-block">
+                            <h4>Should not do</h4>
+                            <ul>
+                                <li>Define business workflows by itself</li>
+                                <li>Replace service-layer decision making</li>
+                                <li>Leak implementation details across the application</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         BENEFITS SECTION
+         ====================================== -->
+    <section class="section-spacing section-architecture-benefits">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="architecture-benefits-card h-100">
+                        <h3 class="architecture-benefits-title">Benefits of this architecture approach</h3>
+
+                        <ul class="architecture-benefits-list">
+                            <li>Cleaner, thinner route handlers</li>
+                            <li>Better business logic organization</li>
+                            <li>Improved maintainability as projects grow</li>
+                            <li>Safer feature additions and refactoring</li>
+                            <li>More professional codebase structure</li>
+                            <li>Easier onboarding for new developers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="architecture-benefits-card h-100">
+                        <h3 class="architecture-benefits-title">What this says about me as an engineer</h3>
+
+                        <p class="architecture-benefits-text">
+                            I do not only focus on making features work. I care about building systems
+                            that other engineers can read, extend, and maintain with confidence.
+                            That mindset is one of the strongest signals I want this portfolio to communicate.
+                        </p>
+
+                        <div class="mt-4 d-flex flex-wrap gap-3">
+                            <a href="projects.html" class="btn btn-accent">See Project Examples</a>
+                            <a href="system-design.html" class="btn btn-outline-theme">System Design Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         CODE STRUCTURE EXAMPLE
+         ====================================== -->
+    <section class="section-spacing section-code-structure-example">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-badge mb-3 d-inline-block">Structure Example</span>
+                    <h2 class="section-title mb-3">How I think about project organization</h2>
+                    <p class="section-description">
+                        This simplified example reflects how I prefer to structure a backend project.
+                    </p>
+                </div>
+            </div>
+
+            <div class="code-structure-card">
+                <div class="code-structure-header">
+                    <h3 class="code-structure-title mb-0">Backend Project Structure</h3>
+                </div>
+
+                <div class="code-structure-body">
+<pre><code>app/
+├── routes/
+│   ├── auth.py
+│   ├── product.py
+│   └── sales.py
+│
+├── services/
+│   ├── auth_service.py
+│   ├── product_service.py
+│   └── sales_service.py
+│
+├── repositories/
+│   ├── auth_repository.py
+│   ├── product_repository.py
+│   └── sales_repository.py
+│
+├── models/
+├── schemas/
+├── core/
+└── db/</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+         CTA SECTION
+         ====================================== -->
+    <section class="section-spacing section-architecture-page-cta">
+        <div class="container">
+            <div class="architecture-page-cta-box">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="architecture-page-cta-title">
+                            Interested in backend engineering with strong architecture discipline?
+                        </h2>
+                        <p class="architecture-page-cta-text mb-0">
+                            I am especially interested in roles where backend quality, maintainability,
+                            and system structure are treated as important engineering priorities.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-accent btn-lg">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================
+     FOOTER
+     ====================================== -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-main">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand-block">
+
+                        <a href="index.html" class="footer-brand">Md. Naimul Islam</a>
+
+                        <p class="footer-brand-text">
+                            I am a Backend Developer focused on building scalable and maintainable systems using Python, 
+                            FastAPI, PostgreSQL, and clean architecture principles.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/mdnaimul404"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/naimul404/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:md.naimul16@gmail.com"
+                               class="footer-social-link"
+                               aria-label="Email">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <!-- Resume -->
+                            <a href="resume/md_naimul_islam_resume.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="footer-social-link"
+                               aria-label="Resume">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">Navigation</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="system-design.html">System Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-links-block">
+                        <h3 class="footer-block-title">More</h3>
+
+                        <ul class="footer-links-list">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+
+                            <li>
+                                <a href="resume/md_naimul_islam_resume.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   Resume
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/mdnaimul404"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   GitHub
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/naimul404/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                   LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="footer-contact-block">
+                        <h3 class="footer-block-title">Professional Focus</h3>
+
+                        <ul class="footer-focus-list">
+                            <li>Backend Engineering</li>
+                            <li>FastAPI API Development</li>
+                            <li>PostgreSQL Database Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maintainable Backend Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">
+                        © 2026 Md. Naimul Islam. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="footer-bottom-text mb-0">
+                        Built with HTML, CSS, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
